@@ -10,7 +10,7 @@
 - Секційні теги: header, footer, main, section, nav, article
 - Теги для розмітки текста
 - Валідація HTML-документа
-- Інструменти розробника: Chrome DevTools. Вкладки Elements, Console, Sources, Network.
+- Інструменти розробника: Chrome DevTools. Вкладки Elements, Console, Sources, Network
 
 ---
 
