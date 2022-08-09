@@ -6,74 +6,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="The best barbershop in the world" />
     <title>BarberShop</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <!-- Header section -->
-    <header>
-      <a href="">
-        <!-- Відносний шлях до файлу -->
-        <img src="./images/header/page-logo.png" alt="BarberSop logo" width="68" height="56" />
-
-        <!-- Абсолютний шлях до файлу -->
-        <!-- <img
-              src="https://images.unsplash.com/photo-1659904825585-2fdf22b3aa73?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
-              alt=""
-              width="387"
-              height="580"
-            /> -->
+    <header class="header">
+      <a class="header-link" href="">
+        <img
+          class="header-logo"
+          src="./images/header/page-logo.png"
+          alt="BarberSop logo"
+          width="68"
+          height="56"
+        />
       </a>
-      <nav>
-        <ul>
-          <li>
-            <a href="">About</a>
+      <nav class="header-nav">
+        <ul class="list header-list">
+          <li class="header-item" id="item">
+            <a class="header-nav-link link" href="#about">About</a>
           </li>
-          <li>
-            <a href="">Services and prices</a>
+          <li class="header-item">
+            <a class="header-nav-link link" href="#price">Services and prices</a>
           </li>
-          <li>
-            <a href="">Barbers</a>
+          <li class="header-item">
+            <a class="header-nav-link link" href="#team">Barbers</a>
           </li>
-          <li>
-            <a href="">Contacts</a>
+          <li class="header-item">
+            <a class="header-nav-link link" href="#contacts">Contacts</a>
           </li>
         </ul>
       </nav>
       <div>
-        <a href="tel:+380441111111">+38 044 111 11 11</a>
-        <button type="button">Online-booking</button>
+        <a class="header-contact link" href="tel:+380441111111">+38 044 111 11 11</a>
+        <button class="btn" type="button">Online-booking</button>
       </div>
     </header>
     <!-- Main section -->
     <main>
       <!-- Hero section -->
-      <section>
-        <ul>
-          <li>
-            <a href="">Youtube</a>
+      <section class="hero">
+        <ul class="list hero-list">
+          <li class="hero-item">
+            <a class="link hero-link" href="">Youtube</a>
           </li>
-          <li>
-            <a href="">Instagram</a>
+          <li class="hero-item">
+            <a class="link hero-link" href="">Instagram</a>
           </li>
         </ul>
 
-        <div>
-          <p>A hair salon for men in Kyiv</p>
-          <h1>BarberShop</h1>
-          <p>We are experts in trendy men’s haircuts. We work quickly, carefully and with style.</p>
+        <div class="hero-right-side">
+          <p class="uppertitle uppertitle-theme-dark">A hair salon for men in Kyiv</p>
+          <h1 class="main-title">BarberShop</h1>
+          <p class="hero-subtitle"
+            >We are experts in trendy men’s haircuts. We work quickly, carefully and with style.</p
+          >
         </div>
 
-        <ul>
-          <li>
-            <button type="button">Back</button>
+        <ul class="list hero-list">
+          <li class="hero-item">
+            <button class="hero-btn" type="button">Back</button>
           </li>
-          <li>
-            <button type="button">Forward</button>
+          <li class="hero-item">
+            <button class="hero-btn" type="button">Forward</button>
           </li>
         </ul>
       </section>
       <!-- About section -->
-      <section>
-        <ul>
+      <section id="about">
+        <ul class="list">
           <li>
             <img src="./images/about/img-1.jpg" alt="Beard shaving" width="270" height="445" />
           </li>
@@ -82,7 +92,7 @@
           </li>
         </ul>
         <div>
-          <p>About</p>
+          <p class="uppertitle">About</p>
           <h2>Best Barbershop in your city</h2>
           <h3>If you want to add more confidence to your image, you should definitely visit us.</h3>
           <p>
@@ -91,16 +101,16 @@
             a team that is always "on the same wave" with clients. Therefore, we are always ready to
             improve everyone who comes to us!
           </p>
-          <a href="">ONLINE-BOOKING</a>
+          <a class="link" href="">ONLINE-BOOKING</a>
         </div>
       </section>
       <!-- Price section -->
-      <section>
-        <p>spend your time with the best masters</p>
+      <section id="price">
+        <p class="uppertitle uppertitle-theme-dark">spend your time with the best masters</p>
         <h2></h2>
-        <ul>
+        <ul class="list">
           <li>
-            <ul>
+            <ul class="list">
               <li>Men’s haircut from 300 uah.</li>
               <li>Beard trim from 300 uah.</li>
               <li>Mustache trim from 200 uah.</li>
@@ -108,7 +118,7 @@
             </ul>
           </li>
           <li>
-            <ul>
+            <ul class="list">
               <li>Trainee’s haircut from 50 uah.</li>
               <li>Haircut under the nozzle from 200 uah.</li>
               <li>Children’s haircut (0-12 y.o.) from 300 uah.</li>
@@ -116,27 +126,11 @@
             </ul>
           </li>
         </ul>
-
-        <!-- <div>
-          <ul>
-            <li>Men’s haircut from 300 uah.</li>
-            <li>Beard trim from 300 uah.</li>
-            <li>Mustache trim from 200 uah.</li>
-            <li>Straight razor shave from 200 uah.</li>
-          </ul>
-          <ul>
-            <li>Trainee’s haircut from 50 uah.</li>
-            <li>Haircut under the nozzle from 200 uah.</li>
-            <li>Children’s haircut (0-12 y.o.) from 300 uah.</li>
-            <li>Camouflage of gray hair from 200 uah.</li>
-          </ul>
-        </div> -->
-
-        <a href="">online-booking</a>
+        <a class="link" href="">online-booking</a>
       </section>
       <!-- Benefits section -->
       <section>
-        <ul>
+        <ul class="list">
           <li>
             <p>600 <sup>+</sup></p>
             <p>Satisfied customers per day</p>
@@ -155,7 +149,7 @@
           </li>
         </ul>
         <div>
-          <p>old traditional school</p>
+          <p class="uppertitle">old traditional school</p>
           <h2>Why people come to us?</h2>
           <h3>
             Only good things are said about us. But it's better to see and feel 1 time than read 10
@@ -164,17 +158,18 @@
         </div>
       </section>
       <!-- Team section -->
-      <section>
-        <p>for true enjoyers of the atmosphere</p>
+      <section class="team" id="team">
+        <p class="uppertitle">for true enjoyers of the atmosphere</p>
         <h2>Our barbers</h2>
-        <ul>
+        <ul class="list">
           <li>
             <img src="./images/team/team-1.jpg" alt="John Smith" width="370" height="346" />
             <h3>John Smith</h3>
             <p>Extreme Barber</p>
-            <ul>
+            <ul class="list">
               <li>
                 <a
+                  class="link"
                   href="https://instagram.com"
                   target="_blank"
                   rel="nofollow noopener noreferrer"
@@ -190,6 +185,7 @@
               </li>
               <li>
                 <a
+                  class="link"
                   href="https://twitter.com"
                   aria-label="Twitter"
                   target="_blank"
@@ -200,6 +196,7 @@
               </li>
               <li>
                 <a
+                  class="link"
                   href="https://facebook.com"
                   aria-label="Facebook"
                   target="_blank"
@@ -209,6 +206,7 @@
               </li>
               <li>
                 <a
+                  class="link"
                   href="https://linkedin.com"
                   aria-label="LinkedIn"
                   target="_blank"
@@ -222,9 +220,10 @@
             <img src="./images/team/team-2.jpg" alt="Michele Doe" width="370" height="346" />
             <h3>Michele Doe</h3>
             <p>Extreme Barber</p>
-            <ul>
+            <ul class="list">
               <li>
                 <a
+                  class="link"
                   href="https://instagram.com"
                   target="_blank"
                   rel="nofollow noopener noreferrer"
@@ -240,6 +239,7 @@
               </li>
               <li>
                 <a
+                  class="link"
                   href="https://twitter.com"
                   aria-label="Twitter"
                   target="_blank"
@@ -250,6 +250,7 @@
               </li>
               <li>
                 <a
+                  class="link"
                   href="https://facebook.com"
                   aria-label="Facebook"
                   target="_blank"
@@ -259,6 +260,7 @@
               </li>
               <li>
                 <a
+                  class="link"
                   href="https://linkedin.com"
                   aria-label="LinkedIn"
                   target="_blank"
@@ -272,9 +274,10 @@
             <img src="./images/team/team-3.jpg" alt="Alan Black" width="370" height="346" />
             <h3>Alan Black</h3>
             <p>Extreme Barber</p>
-            <ul>
+            <ul class="list">
               <li>
                 <a
+                  class="link"
                   href="https://instagram.com"
                   target="_blank"
                   rel="nofollow noopener noreferrer"
@@ -290,6 +293,7 @@
               </li>
               <li>
                 <a
+                  class="link"
                   href="https://twitter.com"
                   aria-label="Twitter"
                   target="_blank"
@@ -300,6 +304,7 @@
               </li>
               <li>
                 <a
+                  class="link"
                   href="https://facebook.com"
                   aria-label="Facebook"
                   target="_blank"
@@ -309,6 +314,7 @@
               </li>
               <li>
                 <a
+                  class="link"
                   href="https://linkedin.com"
                   aria-label="LinkedIn"
                   target="_blank"
@@ -322,9 +328,9 @@
       </section>
       <!-- Gallery section -->
       <section>
-        <p>in Latin, "barba" means "beard"</p>
+        <p class="uppertitle">in Latin, "barba" means "beard"</p>
         <h2 hidden>Our gallery</h2>
-        <ul>
+        <ul class="list">
           <li>
             <img src="./images/gallery/gallery-img-1.jpg" alt="gallery" width="270" height="360" />
           </li>
@@ -361,12 +367,13 @@
             <button type="submit">send</button>
           </form>
         </section>
-        <section>
+        <section id="contacts">
           <h2>Contacts</h2>
           <address>
-            <ul>
+            <ul class="list">
               <li>
                 <a
+                  class="link"
                   href="https://goo.gl/maps/UgYU75aT7GZat5ea9"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -375,10 +382,10 @@
                 >
               </li>
               <li>
-                <a href="tel:+380441111111">+38 044 111 11 11</a>
+                <a class="link" href="tel:+380441111111">+38 044 111 11 11</a>
               </li>
               <li>
-                <a href="mailto:barbershop@email.com">barbershop@email.com</a>
+                <a class="link" href="mailto:barbershop@email.com">barbershop@email.com</a>
               </li>
             </ul>
           </address>
@@ -395,12 +402,12 @@
     <!-- Footer section -->
     <footer>
       <p>&#169; Copyright 2020</p>
-      <ul>
+      <ul class="list">
         <li>
-          <a href="">Instagram</a>
+          <a class="link" href="">Instagram</a>
         </li>
         <li>
-          <a href="">Youtube</a>
+          <a class="link" href="">Youtube</a>
         </li>
       </ul>
     </footer>
