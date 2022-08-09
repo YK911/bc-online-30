@@ -1,16 +1,22 @@
 # bc-online-30
 
-Заняття 1:
+Заняття 2:
 
-- HTML - мова розмітки документа, структура, контент сторінки
-- Теги та атрибути
-- Cкелет HTML-документа: doctype, html, head, body
-- Метаінформація документа: title, meta
-- Поняття семантичної розмітки
-- Секційні теги: header, footer, main, section, nav, article
-- Теги для розмітки текста
-- Валідація HTML-документа
-- Інструменти розробника: Chrome DevTools. Вкладки Elements, Console, Sources, Network
+- Синтаксис CSS: правило, селектор, властивості та и значення.
+- Підключення стилей: inline, embedded, linked
+- CSS-селектори: тегу, класу, id, атрибуту, Х > Y дитини, X Y нащадка
+- Псевдокласи стану: :hover, :focus, :active
+- Колір тексту: властивість color
+- Робота з кольорами: hex, rgb, rgba
+- Каскад. Приорітетність. Спадкування.
+
+- Властивості оформелння тексту: text-align, text-decoration, text-transform, text-indent,
+  line-height, letter-spacing, word-spacing, text-shadow
+- Сімейства шрифту serif та sans-serif
+- Властивості оформлення шрифту: font-size, font-weight, font-style, font-family
+- Псевдоелементи текстового контенту ::firstLetter та ::selection
+- Підключення зовнішніх шрифтів через GoogleFonts, опції (жирність, стиль, символи)
+- Підключення набору з декількох шрифтів одним посиланням
 
 ---
 

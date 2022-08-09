@@ -1,31 +1,160 @@
-td {
-  outline: 1px solid black;
+:root {
+  /* Fonts */
+  --main-font: 'Open Sans';
+  --secondary-font: 'Raleway';
+
+  /* Text colors */
+  --main-txt-cl: #303030;
+  --accent-txt-cl: #ff6c00;
+  --light-txt-cl: #ffffff;
+
+  --grey-cl: rgb(157, 164, 189);
+  --grey-cl-60: rgba(157, 164, 189, 0.6);
+  --grey-cl-60: rgba(157, 164, 189, 0.6);
+
+  /* BG colors */
+  --dark-bg-cl: #191c26;
+  --accent-bg-cl: #ff6c00;
+
+  /* Others */
+  --btn-radius: 25px;
 }
 
-th {
-  background-color: tomato;
+/* base styles */
+body {
+  font-family: var(--main-font), sans-serif;
+  color: var(--main-txt-cl);
+  font-size: 18px;
+  line-height: calc(30 / 18);
+  letter-spacing: 0.02em;
 }
 
-th[colspan] {
-  background-color: lightblue;
-  outline: 1px solid rgb(69, 98, 107);
+.link {
+  text-decoration: none;
+  color: currentColor;
 }
 
-th[rowspan] {
-  background-color: lightseagreen;
-  outline: 1px solid rgb(69, 98, 107);
+.list {
+  list-style: none;
 }
 
-.registered {
-  background-color: lightgray;
-  outline: 1px solid rgb(112, 112, 112);
+.main-title {
+  font-family: var(--secondary-font), sans-serif;
+  font-size: 72px;
+  line-height: calc(85 / 72);
+  letter-spacing: 0.05em;
+  color: var(--light-txt-cl);
 }
 
-.active {
-  background-color: lightgreen;
-  outline: 1px solid rgb(65, 201, 65);
+.uppertitle {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
-.inactive {
-  background-color: lightcoral;
-  outline: 1px solid rgb(217, 77, 77);
+
+.uppertitle-theme-dark {
+  color: var(--grey-cl-60);
+}
+
+.section-title {
+  font-size: 42px;
+  line-height: calc(49 / 42);
+  letter-spacing: 0.05em;
+}
+
+.subtitle-theme-dark {
+  color: var(--grey-cl);
+}
+
+.btn {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: calc(16 / 12);
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--light-txt-cl);
+
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: var(--accent-bg-cl);
+}
+
+.btn-dark-theme {
+  color: var(--light-txt-cl);
+}
+
+.btn-dark-theme:hover,
+.btn-dark-theme:focus {
+  background-color: var(--accent-bg-cl);
+}
+
+/* Header */
+.header {
+  background-color: var(--dark-bg-cl);
+}
+
+.header-nav-link,
+.header-contact {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
+
+  color: var(--light-txt-cl);
+}
+
+.header-nav-link:hover,
+.header-nav-link:focus,
+.header-contact:hover,
+.header-contact:focus {
+  color: var(--accent-txt-cl);
+}
+
+/* Hero */
+.hero {
+  background-color: #191c26;
+}
+
+.hero-link {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  letter-spacing: 0.2em;
+
+  color: #303030;
+}
+
+.hero-link:hover,
+.hero-link:focus {
+  color: var(--accent-txt-cl);
+}
+
+.hero-uppertitle {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  color: rgba(157, 164, 189, 0.6);
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  line-height: calc(30 / 18);
+  letter-spacing: 0.02em;
+
+  color: #9da4bd;
+}
+
+.hero > .uppertitle,
+.team > .uppertitle {
+  color: red;
 }
