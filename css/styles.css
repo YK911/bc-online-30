@@ -17,6 +17,7 @@
   --accent-bg-cl: #ff6c00;
 
   /* Others */
+  --border-light-cl: #ffffff;
   --btn-radius: 25px;
 }
 
@@ -44,6 +45,10 @@ p {
   margin: 0;
 }
 
+img {
+  display: block;
+}
+
 .link {
   text-decoration: none;
   color: currentColor;
@@ -53,6 +58,19 @@ p {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
 /* reset end */
 
@@ -68,8 +86,8 @@ p {
   padding-right: 15px;
   width: 1200px;
 
-  outline: 2px solid red;
-  outline-offset: -2px;
+  /* outline: 2px solid red;
+  outline-offset: -2px; */
 }
 
 .main-title {
@@ -125,9 +143,6 @@ p {
   padding-top: 11px;
   padding-bottom: 11px;
 
-  border: 1px solid #ff6c00;
-  border-radius: 25px;
-
   font-family: inherit;
   font-weight: 600;
   font-size: 12px;
@@ -136,6 +151,8 @@ p {
   text-transform: uppercase;
   color: var(--main-txt-cl);
 
+  border: 1px solid #ff6c00;
+  border-radius: 25px;
   background-color: transparent;
   cursor: pointer;
 }
@@ -204,6 +221,10 @@ p {
 }
 
 .slider-btn {
+  min-width: 68px;
+  padding: 0;
+  padding-bottom: 8px;
+
   font-weight: 600;
   font-size: 11px;
   line-height: calc(15 / 11);
@@ -212,8 +233,22 @@ p {
   color: var(--light-txt-cl);
 
   background-color: transparent;
-
+  border: none;
+  border-bottom: 1px solid var(--border-light-cl);
   cursor: pointer;
+}
+
+.slider-btn.disabled {
+  color: var(--grey-cl-60);
+  border-color: var(--grey-cl-60);
+}
+
+.slider-item:first-child .slider-btn {
+  text-align: left;
+}
+
+.slider-item:last-child .slider-btn {
+  text-align: right;
 }
 
 /**
@@ -309,6 +344,11 @@ p {
 
   color: #303030;
 }
+
+.benefits-right-side {
+  width: 500px;
+}
+
 /**
   |============================
   | Team
@@ -318,7 +358,13 @@ p {
   background-color: #f7f7f7;
 }
 
+.team-title {
+  margin-bottom: 44px;
+}
+
 .team-name {
+  margin-bottom: 8px;
+
   font-weight: 400;
   font-size: 18px;
   line-height: calc(25 / 18);
@@ -327,6 +373,8 @@ p {
 }
 
 .team-position {
+  margin-bottom: 30px;
+
   font-size: 14px;
   line-height: calc(19 / 14);
   text-align: center;
@@ -356,7 +404,12 @@ p {
   |============================
 */
 .contacts-address {
+  margin-bottom: 70px;
   font-style: normal;
+}
+
+.contacts-item:not(:last-child) {
+  margin-bottom: 20px;
 }
 
 .contacts-link {
@@ -364,6 +417,8 @@ p {
 }
 
 .contacts-uppertitle {
+  margin-bottom: 20px;
+
   font-weight: 600;
   font-size: 11px;
   line-height: calc(15 / 11);
@@ -388,4 +443,10 @@ p {
   letter-spacing: 0.2em;
 
   color: var(--grey-cl);
+}
+
+.footer-link {
+  display: inline-block;
+  padding-top: 56px;
+  padding-bottom: 56px;
 }
