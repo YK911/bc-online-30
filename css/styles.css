@@ -33,6 +33,17 @@ body {
   letter-spacing: 0.02em;
 }
 
+/* reset start */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
 .link {
   text-decoration: none;
   color: currentColor;
@@ -40,9 +51,30 @@ body {
 
 .list {
   list-style: none;
+  padding: 0;
+  margin: 0;
+}
+/* reset end */
+
+.section {
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 1200px;
+
+  outline: 2px solid red;
+  outline-offset: -2px;
 }
 
 .main-title {
+  margin-bottom: 20px;
+
   font-family: var(--secondary-font);
   font-size: 72px;
   line-height: calc(85 / 72);
@@ -51,6 +83,8 @@ body {
 }
 
 .uppertitle {
+  margin-bottom: 20px;
+
   font-weight: 600;
   font-size: 11px;
   line-height: calc(15 / 11);
@@ -63,6 +97,7 @@ body {
 }
 
 .title {
+  margin-bottom: 20px;
   font-family: var(--secondary-font);
   font-size: 42px;
   line-height: calc(49 / 42);
@@ -70,6 +105,8 @@ body {
 }
 
 .title-theme-dark {
+  margin-bottom: 44px;
+
   color: var(--light-txt-cl);
 }
 
@@ -82,6 +119,15 @@ body {
 }
 
 .btn {
+  max-width: 180px;
+  min-width: 160px;
+  min-height: 40px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+
+  border: 1px solid #ff6c00;
+  border-radius: 25px;
+
   font-family: inherit;
   font-weight: 600;
   font-size: 12px;
@@ -175,7 +221,17 @@ body {
   | About
   |============================
 */
+.about-rigth-side {
+  width: 500px;
+}
+
+.about-undertitle {
+  margin-bottom: 20px;
+}
+
 .about-desc {
+  margin-bottom: 40px;
+
   font-size: 14px;
   line-height: calc(26 / 14);
   letter-spacing: 0.02em;
@@ -191,9 +247,36 @@ body {
   background-color: var(--dark-bg-cl);
 }
 
+.price-block {
+  margin-bottom: 50px;
+}
+
+.price-list {
+  width: 585px;
+  padding: 30px 40px;
+}
+
 .price-item {
   color: var(--grey-cl);
 }
+
+.price-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+/* Альтернативні варіанти запису */
+/* .price-item {
+  margin-bottom: 20px;
+  color: var(--grey-cl);
+}
+
+.price-item:last-child {
+  margin-bottom: 0;
+} */
+
+/* .price-item + .price-item {
+  margin-top: 20px;
+} */
 
 /**
   |============================
@@ -256,6 +339,9 @@ body {
   | Gallery
   |============================
 */
+.gallery-uppertitle {
+  margin-bottom: 44px;
+}
 /**
   |============================
   | Booking
