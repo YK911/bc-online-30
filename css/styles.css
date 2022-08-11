@@ -15,10 +15,13 @@
   /* BG colors */
   --dark-bg-cl: #191c26;
   --accent-bg-cl: #ff6c00;
+  --light-bg-cl: #f7f7f7;
 
   /* Others */
   --border-light-cl: #ffffff;
   --btn-radius: 25px;
+
+  /* Grid */
 }
 
 /**
@@ -47,6 +50,8 @@ p {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .link {
@@ -180,8 +185,20 @@ img {
   background-color: var(--dark-bg-cl);
 }
 
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.header-link {
+  margin-right: 70px;
+}
+
 .header-nav-link,
 .header-contact {
+  display: block;
+  padding-top: 52px;
+  padding-bottom: 52px;
   font-weight: 600;
   font-size: 12px;
   line-height: 1.33;
@@ -190,11 +207,29 @@ img {
   color: var(--light-txt-cl);
 }
 
+.header-list {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+/* .header-item:not(:last-child) {
+  margin-right: 30px;
+} */
+
 .header-nav-link:hover,
 .header-nav-link:focus,
 .header-contact:hover,
 .header-contact:focus {
   color: var(--accent-txt-cl);
+}
+
+.header-group {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+
+  margin-left: auto;
 }
 
 /**
@@ -204,6 +239,25 @@ img {
 */
 .hero {
   background-color: #191c26;
+}
+
+.hero-container {
+  display: flex;
+}
+
+.hero-media-list {
+  flex-basis: 100px;
+}
+
+.hero-right-side {
+  flex-grow: 1;
+  padding-top: 272px;
+  padding-bottom: 206px;
+  padding-left: 100px;
+}
+
+.hero-undertitle {
+  width: 360px;
 }
 
 .media-link {
@@ -218,6 +272,10 @@ img {
 .media-link:hover,
 .media-link:focus {
   color: var(--accent-txt-cl);
+}
+
+.slider-list {
+  display: none;
 }
 
 .slider-btn {
@@ -256,6 +314,16 @@ img {
   | About
   |============================
 */
+.about-container {
+  display: flex;
+  gap: 64px;
+}
+
+.about-list {
+  display: flex;
+  gap: 30px;
+}
+
 .about-rigth-side {
   width: 500px;
 }
@@ -283,20 +351,41 @@ img {
 }
 
 .price-block {
+  display: flex;
   margin-bottom: 50px;
 }
 
 .price-list {
-  width: 585px;
+  /* width: 585px; */
+  flex-basis: 50%;
   padding: 30px 40px;
+
+  outline: 1px solid red;
 }
 
 .price-item {
   color: var(--grey-cl);
+
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
 }
 
 .price-item:not(:last-child) {
   margin-bottom: 20px;
+}
+
+.price-line {
+  flex-grow: 1;
+
+  height: 1px;
+  background-color: rgb(255, 255, 255);
+}
+
+.price-btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Альтернативні варіанти запису */
@@ -318,6 +407,37 @@ img {
   | Benefits
   |============================
 */
+.benefits-container {
+  display: flex;
+}
+
+.benefits-left-side {
+  flex-basis: 50%;
+}
+
+.benefits-list {
+  width: 370px;
+  margin-left: auto;
+  margin-right: auto;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.benefits-item {
+  flex-basis: 170px;
+  min-height: 133px;
+  padding: 20px;
+
+  background: var(--light-bg-cl);
+}
+
+.benefits-item:nth-child(2n) {
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
 .benefits-quantity {
   font-weight: 700;
   font-size: 42px;
@@ -356,6 +476,16 @@ img {
 */
 .team {
   background-color: #f7f7f7;
+}
+
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.team-item {
+  flex-basis: calc((100% - 30px * 3) / 4);
 }
 
 .team-title {

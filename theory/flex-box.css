@@ -1,0 +1,87 @@
+body {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 900px;
+  height: 600px;
+  outline: 2px solid lightsalmon;
+}
+
+.container-item {
+  width: 200px;
+  height: 150px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 2em;
+  text-align: center;
+  color: white;
+
+  background-color: tomato;
+  border: 2px dashed black;
+}
+
+.container-item:nth-child(2n) {
+  background-color: lightblue;
+}
+
+/* .container-item:nth-child(3n) {
+  font-size: 5em;
+} */
+
+/**
+  |============================
+  | Flex box properties
+  |============================
+*/
+.container {
+  display: flex;
+  /* flex-wrap: wrap; */
+  flex-direction: column;
+  /* justify-content: space-between; */
+  /* align-items: stretch; */
+  /* align-content: space-between; */
+  /* gap: 30px; */
+  /* row-gap: 50px;
+  column-gap: 30px; */
+}
+
+.container-item {
+  /* width: 100px; */
+  /* flex-basis: calc(100% / 4); */
+  /* flex-basis: auto; */
+  /* flex-grow: 1;
+  flex-shrink: 0; */
+}
+
+.container-item:nth-child(3) {
+  /* order: 2; */
+  background-color: hotpink;
+  /* align-self: baseline; */
+}
+.container-item:nth-child(2) {
+  /* order: 1; */
+  background-color: grey;
+}
+.container-item:nth-child(5) {
+  /* order: -1; */
+  background-color: teal;
+}
+/* .container-item:nth-child(5) {
+  flex-shrink: 2;
+} */
+
+/* .container-item:first-child {
+  width: 250px;
+}
+.container-item:last-child {
+  flex-grow: 1;
+} */
