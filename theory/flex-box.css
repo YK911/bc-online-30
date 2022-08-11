@@ -168,12 +168,20 @@ w = 175px
   display: flex;
 }
 
+/**
+  |============================
+  | У випадку, коли елементи можуть поміститися у
+  | flex-контейнері flex-shrink не буде мати впливу
+  | на розмір елементів
+  |============================
+*/
+
 /* .container-item:nth-child(1) {
-  flex-shrink: 0.1;
+  flex-shrink: 1;
 }
 .container-item:nth-child(2) {
-  flex-shrink: 0.3;
+  flex-shrink: 3;
 }
 .container-item:nth-child(3) {
-  flex-shrink: 0.4;
+  flex-shrink: 4;
 } */
