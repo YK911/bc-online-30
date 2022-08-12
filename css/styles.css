@@ -10,6 +10,7 @@
   --dark-txt-cl: #555555;
 
   --grey-cl: rgb(157, 164, 189);
+  --grey-cl-12: rgba(157, 164, 189, 0.12);
   --grey-cl-60: rgba(157, 164, 189, 0.6);
 
   /* BG colors */
@@ -97,9 +98,9 @@ img {
   outline-offset: -2px; */
 }
 
-[class*='-container'] {
+/* [class*='-container'] {
   display: flex;
-}
+} */
 
 .main-title {
   margin-bottom: 20px;
@@ -207,7 +208,7 @@ img {
 }
 
 .header-container {
-  /* display: flex; */
+  display: flex;
   align-items: center;
 }
 
@@ -234,10 +235,6 @@ img {
   gap: 30px;
 }
 
-/* .header-item:not(:last-child) {
-  margin-right: 30px;
-} */
-
 .header-nav-link:hover,
 .header-nav-link:focus,
 .header-contact:hover,
@@ -258,12 +255,8 @@ img {
   | Hero
   |============================
 */
-.hero {
-  background-color: #191c26;
-}
-
 .hero-container {
-  /* display: flex; */
+  display: flex;
 }
 
 .hero-media-list {
@@ -275,6 +268,9 @@ img {
   padding-top: 272px;
   padding-bottom: 206px;
   padding-left: 100px;
+
+  background-color: rgba(25, 28, 38, 0.2);
+  background-image: url(../images/hero/hero-bg.jpg);
 }
 
 .hero-undertitle {
@@ -342,7 +338,7 @@ img {
   |============================
 */
 .about-container {
-  /* display: flex; */
+  display: flex;
   gap: 64px;
 }
 
@@ -374,20 +370,39 @@ img {
   |============================
 */
 .price {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
   background-color: var(--dark-bg-cl);
+  background-image: url(../images/price/price-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .price-block {
   display: flex;
   margin-bottom: 50px;
+
+  /* background-image: linear-gradient(to left, #dd15a1 0%, rgba(23, 26, 36, 0.2) 100%),
+    linear-gradient(to left, #0c33d0 0%, rgba(9, 11, 19, 0.2) 100%);
+
+  background-position: left top, right top;
+
+  background-size: 585px 200px, 585px 100px; */
 }
 
 .price-list {
-  /* width: 585px; */
   flex-basis: 50%;
   padding: 30px 40px;
+}
 
-  outline: 1px solid red;
+.price-list:first-child {
+  background-image: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+}
+
+.price-list:last-child {
+  background-image: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
 }
 
 .price-item {
@@ -406,7 +421,7 @@ img {
   flex-grow: 1;
 
   height: 1px;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--grey-cl-12);
 }
 
 .price-btn {
@@ -415,27 +430,13 @@ img {
   margin-right: auto;
 }
 
-/* Альтернативні варіанти запису */
-/* .price-item {
-  margin-bottom: 20px;
-  color: var(--grey-cl);
-}
-
-.price-item:last-child {
-  margin-bottom: 0;
-} */
-
-/* .price-item + .price-item {
-  margin-top: 20px;
-} */
-
 /**
   |============================
   | Benefits
   |============================
 */
 .benefits-container {
-  /* display: flex; */
+  display: flex;
 }
 
 .benefits-left-side {
@@ -505,16 +506,6 @@ img {
   background-color: #f7f7f7;
 }
 
-/* .team-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--indent);
-} */
-
-/* .team-item {
-  flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
-} */
-
 .team-title {
   margin-bottom: 44px;
 }
@@ -553,6 +544,38 @@ img {
   gap: 10px;
 }
 
+.socials-link {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 50%;
+  /* outline: transparent; */
+
+  color: var(--main-txt-cl);
+}
+
+.socials-link:hover,
+.socials-link:focus {
+  color: var(--accent-txt-cl);
+}
+
+.socials-icon {
+  fill: currentColor;
+}
+
+/* Зміна кольору svg через стан ховеру/фокусу для посилання */
+/* .socials-icon {
+  fill: var(--main-txt-cl);
+}
+
+.socials-link:hover .socials-icon,
+.socials-link:focus .socials-icon {
+  fill: var(--accent-txt-cl);
+} */
+
 /**
   |============================
   | Gallery
@@ -571,17 +594,29 @@ img {
   |============================
 */
 .contatcs-group {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+
   background-color: var(--dark-bg-cl);
+
+  background-image: url(../images/contatcs/contacts-bg.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  /* background-position: top 0 left calc(50% + 327px); */
+  background-position: center right;
 }
 
 .contacts-container {
-  /* display: flex; */
+  display: flex;
   justify-content: space-between;
 }
 
 .contacts {
   flex-basis: 570px;
+  padding-left: 115px;
 }
+
 /**
   |============================
   | Contatcs
@@ -597,7 +632,18 @@ img {
 }
 
 .contacts-link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
   color: var(--grey-cl);
+}
+
+.contacts-item:first-child .contacts-icon {
+  margin-top: -30px;
+}
+.contacts-icon {
+  stroke: var(--grey-cl);
+  fill: none;
 }
 
 .contacts-uppertitle {
