@@ -1,22 +1,20 @@
 # bc-online-30
 
-Заняття 2:
+Заняття 6:
 
-- Синтаксис CSS: правило, селектор, властивості та и значення.
-- Підключення стилей: inline, embedded, linked
-- CSS-селектори: тегу, класу, id, атрибуту, Х > Y дитини, X Y нащадка
-- Псевдокласи стану: :hover, :focus, :active
-- Колір тексту: властивість color
-- Робота з кольорами: hex, rgb, rgba
-- Каскад. Приорітетність. Спадкування.
+- Властивість position: static
+- Відносне позиціонування (position: relative)
+- Властивості координат: top, left, right, bottom
+- Абсолютне позиціонування (position: absolute)
+- Фіксоване позиціонування (position: fixed)
+- Липке позиціонування (position: sticky)
+- Властивість z-index
+- Властивість overflow
 
-- Властивості оформелння тексту: text-align, text-decoration, text-transform, text-indent,
-  line-height, letter-spacing, word-spacing, text-shadow
-- Сімейства шрифту serif та sans-serif
-- Властивості оформлення шрифту: font-size, font-weight, font-style, font-family
-- Псевдоелементи текстового контенту ::firstLetter та ::selection
-- Підключення зовнішніх шрифтів через GoogleFonts, опції (жирність, стиль, символи)
-- Підключення набору з декількох шрифтів одним посиланням
+- Переходи
+- 2D-трансформації
+- Перспектива та 3D-трансформації
+- Анімація
 
 ---
 
