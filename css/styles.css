@@ -15,12 +15,15 @@
 
   /* BG colors */
   --dark-bg-cl: #191c26;
+  --dark-bg-cl-60: rgba(25, 28, 38, 0.6);
   --accent-bg-cl: #ff6c00;
   --light-bg-cl: #f7f7f7;
 
   /* Others */
   --border-light-cl: #ffffff;
   --btn-radius: 25px;
+  --anim-fast: 400ms ease-in-out;
+  --anim-slow: 800ms ease-in-out;
 
   /* Grid */
   --indent: 30px;
@@ -114,6 +117,9 @@ img {
 
 .uppertitle {
   margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 
   font-weight: 600;
   font-size: 11px;
@@ -122,8 +128,21 @@ img {
   text-transform: uppercase;
 }
 
+.uppertitle::before {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 1px;
+
+  background-color: var(--main-txt-cl);
+}
+
 .uppertitle-theme-dark {
   color: var(--grey-cl-60);
+}
+
+.uppertitle-theme-dark::before {
+  background-color: var(--grey-cl-60);
 }
 
 .title {
@@ -167,6 +186,8 @@ img {
   border-radius: 25px;
   background-color: transparent;
   cursor: pointer;
+
+  transition: background-color var(--anim-fast);
 }
 
 .btn:hover,
@@ -176,6 +197,8 @@ img {
 
 .btn-theme-dark {
   color: var(--light-txt-cl);
+
+  transition: background-color var(--anim-fast), color var(--anim-fast);
 }
 
 .btn-theme-dark:hover,
@@ -204,7 +227,19 @@ img {
   |============================
 */
 .header {
-  background-color: var(--dark-bg-cl);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+
+  width: 100%;
+
+  transition: background-color var(--anim-fast), backdrop-filter var(--anim-fast);
+}
+
+.header.no-transparency {
+  background-color: var(--dark-bg-cl-60);
+  backdrop-filter: blur(4px);
 }
 
 .header-container {
@@ -227,6 +262,8 @@ img {
   letter-spacing: 0.1em;
 
   color: var(--light-txt-cl);
+
+  transition: color var(--anim-fast);
 }
 
 .header-list {
@@ -256,11 +293,34 @@ img {
   |============================
 */
 .hero-container {
+  position: relative;
   display: flex;
 }
 
+.hero-left-side {
+  position: relative;
+  width: 100px;
+
+  /* outline: 3px dashed blue; */
+  /* позиціонування через flex-контейнер */
+  /* display: flex;
+  align-items: flex-end; */
+}
+
 .hero-media-list {
-  flex-basis: 100px;
+  position: absolute;
+  bottom: 40px;
+  left: 26px;
+
+  transform: rotate(-180deg);
+  writing-mode: vertical-lr;
+
+  /* позиціонування через flex-контейнер */
+  /* flex-basis: 100px; */
+  /* margin-bottom: 40px; */
+  /* outline: 3px solid red; */
+
+  /* властивості позиціонування */
 }
 
 .hero-right-side {
@@ -283,6 +343,15 @@ img {
   gap: 40px;
 }
 
+.media-list::before {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 60px;
+
+  background-color: var(--main-txt-cl);
+}
+
 .media-link {
   font-weight: 600;
   font-size: 11px;
@@ -290,6 +359,8 @@ img {
   letter-spacing: 0.2em;
 
   color: #303030;
+
+  transition: color var(--anim-fast);
 }
 
 .media-link:hover,
@@ -298,7 +369,11 @@ img {
 }
 
 .slider-list {
-  display: none;
+  display: flex;
+  gap: 20px;
+  position: absolute;
+  bottom: 40px;
+  right: 31px;
 }
 
 .slider-btn {
@@ -332,6 +407,29 @@ img {
   text-align: right;
 }
 
+.slider-pagination {
+  position: absolute;
+  top: 50%;
+  right: 31px;
+  transform: translateY(-50%);
+}
+
+.slider-pagination-item {
+  width: 8px;
+  height: 2px;
+  margin-left: auto;
+  background-color: #9da4bd;
+}
+
+.slider-pagination-item:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.slider-pagination-item.active {
+  width: 18px;
+  background-color: #fff;
+}
+
 /**
   |============================
   | About
@@ -345,6 +443,18 @@ img {
 .about-list {
   display: flex;
   gap: 30px;
+}
+
+.about-item {
+  overflow: hidden;
+}
+
+.about-img {
+  transition: transform var(--anim-slow);
+}
+
+.about-item:hover .about-img {
+  transform: scale(1.2);
 }
 
 .about-rigth-side {
@@ -384,25 +494,32 @@ img {
   display: flex;
   margin-bottom: 50px;
 
-  /* background-image: linear-gradient(to left, #dd15a1 0%, rgba(23, 26, 36, 0.2) 100%),
-    linear-gradient(to left, #0c33d0 0%, rgba(9, 11, 19, 0.2) 100%);
-
-  background-position: left top, right top;
-
-  background-size: 585px 200px, 585px 100px; */
+  perspective: 1000px;
 }
 
 .price-list {
   flex-basis: 50%;
   padding: 30px 40px;
+
+  transition: transform var(--anim-fast);
 }
 
 .price-list:first-child {
   background-image: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+
+  transform: rotateY(15deg);
+  transform-origin: left center;
 }
 
 .price-list:last-child {
   background-image: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+
+  transform: rotateY(-15deg);
+  transform-origin: right center;
+}
+
+.price-list:hover {
+  transform: rotate(0);
 }
 
 .price-item {
@@ -458,6 +575,8 @@ img {
   min-height: 133px;
   padding: 20px;
 
+  text-align: center;
+
   background: var(--light-bg-cl);
 }
 
@@ -467,6 +586,9 @@ img {
 }
 
 .benefits-quantity {
+  position: relative;
+  display: inline-block;
+
   font-weight: 700;
   font-size: 42px;
   line-height: calc(57 / 42);
@@ -477,6 +599,11 @@ img {
 }
 
 .benefits-decor {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(15px, 7px);
+
   font-weight: 600;
   font-size: 16px;
   line-height: calc(22 / 16);
@@ -552,9 +679,10 @@ img {
   justify-content: center;
   background-color: #fff;
   border-radius: 50%;
-  /* outline: transparent; */
 
   color: var(--main-txt-cl);
+
+  transition: color var(--anim-fast);
 }
 
 .socials-link:hover,
@@ -581,12 +709,50 @@ img {
   | Gallery
   |============================
 */
+.gallery-uppertitle {
+  margin-bottom: 44px;
+}
+
 .gallery-list {
   --items: 4;
 }
 
-.gallery-uppertitle {
-  margin-bottom: 44px;
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* елемент виїжджає знизу вгору */
+  /* transform: translateY(100%); */
+
+  /* елемент виїжджає з правої сторони вліво*/
+  transform: translateX(100%);
+
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  backdrop-filter: blur(5px);
+  transition: transform var(--anim-slow);
+}
+
+.gallery-item:hover .gallery-wrap {
+  /* елемент виїжджає знизу вгору */
+  transform: translateY(0);
+
+  transform: translateX(0);
+}
+
+.gallery-desc {
+  text-align: center;
+  color: var(--light-txt-cl);
 }
 /**
   |============================
@@ -648,6 +814,8 @@ img {
 
 .contacts-uppertitle {
   margin-bottom: 20px;
+  display: inline-flex;
+  align-items: center;
 
   font-weight: 600;
   font-size: 11px;
@@ -656,6 +824,16 @@ img {
   text-transform: uppercase;
 
   color: var(--light-txt-cl);
+}
+
+.contacts-uppertitle::before {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 1px;
+  margin-right: 20px;
+
+  background-color: rgba(157, 164, 189, 0.4);
 }
 
 .contacts-schedule {
@@ -682,8 +860,116 @@ img {
   color: var(--grey-cl);
 }
 
+.footer-media-list::before {
+  width: 60px;
+  height: 1px;
+}
+
 .footer-link {
   display: inline-block;
   padding-top: 56px;
   padding-bottom: 56px;
+}
+
+/**
+  |============================
+  | Modal window
+  |============================
+*/
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.3);
+
+  transition: opacity var(--anim-fast), visibility var(--anim-fast);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* transform: translate(-50%, -50%); */
+
+  width: 400px;
+  min-height: 500px;
+
+  background-color: #fff;
+  border-radius: 10px;
+
+  animation: heartBeat 1000ms ease-in-out 200ms both;
+}
+
+.backdrop.is-hidden .modal {
+  animation-play-state: paused;
+}
+
+.modal-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--light-txt-cl);
+  background-color: var(--accent-bg-cl);
+  border: none;
+  border-radius: 50%;
+
+  transition: color var(--anim-fast), background-color var(--anim-fast), box-shadow var(--anim-fast);
+  cursor: pointer;
+}
+
+.modal-btn:hover,
+.modal-btn:focus {
+  color: var(--accent-bg-cl);
+  background-color: var(--light-txt-cl);
+  box-shadow: -4px 0px 8px rgba(0, 0, 0, 0.04), -2px 0px 4px rgba(0, 0, 0, 0.08),
+    -1px 0px 3px rgba(0, 0, 0, 0.16);
+}
+
+.modal-icon {
+  fill: currentColor;
+}
+
+/* Animation */
+@keyframes heartBeat {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+
+  20% {
+    transform: translate(-50%, -50%) scale(1.15);
+  }
+
+  40% {
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+
+  60% {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+
+  80% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
 }
