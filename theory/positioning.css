@@ -1,0 +1,48 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 700px;
+  height: 400px;
+
+  background-color: lightblue;
+}
+
+.box-1,
+.box-2,
+.box-3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 150px;
+
+  font-size: 2em;
+  color: white;
+
+  background-color: hotpink;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.box-2 {
+  background-color: lightgreen;
+}
+
+.box-3 {
+  background-color: darkviolet;
+}
+
+/**
+  |============================
+  | Positioning properties
+  |============================
+*/
