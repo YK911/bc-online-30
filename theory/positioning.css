@@ -1,17 +1,23 @@
 body {
-  display: flex;
+  /* display: flex; */
   align-items: center;
   justify-content: center;
   width: 100vw;
   height: 100vh;
+
+  padding-top: 40px;
 }
 
 .container {
-  display: flex;
+  /* display: flex; */
   align-items: center;
   justify-content: space-evenly;
   width: 700px;
-  height: 400px;
+  /* height: 400px; */
+  padding: 20px;
+
+  margin-left: auto;
+  margin-right: auto;
 
   background-color: lightblue;
 }
@@ -46,3 +52,156 @@ body {
   | Positioning properties
   |============================
 */
+/* .box-2 {
+  position: relative;
+  top: 30px;
+  right: -100px;
+} */
+
+.container {
+  position: relative;
+}
+
+.box-2 {
+  position: absolute;
+  bottom: 75px;
+  right: 75px;
+  /* z-index: -1; */
+}
+
+.box-2 {
+  /* position: fixed; */
+  bottom: 50px;
+  right: 50px;
+}
+
+/* .text {
+  padding: 20px 0;
+
+  border-bottom: 10px solid tomato;
+} */
+
+.text:hover {
+  line-height: 1.8;
+}
+
+.box-3 {
+  position: relative;
+  z-index: 1;
+}
+
+.desc {
+  outline: 2px solid red;
+  outline-offset: -2px;
+
+  width: 200px;
+  height: 100px;
+
+  overflow: auto;
+}
+
+.thumb {
+  border: 4px dashed violet;
+  border-radius: 20px;
+  overflow: hidden;
+
+  width: 200px;
+  height: 200px;
+
+  transform: skew(5deg);
+  margin-bottom: 30px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+/**
+  |============================
+  | transition
+  |============================
+*/
+
+:root {
+  --anim-slow: 900ms ease;
+  --anim-fast: 400ms ease;
+}
+.btn {
+  padding: 10px 30px;
+  background-color: violet;
+  color: white;
+  border: 1px solid transparent;
+  border-radius: 15px;
+  cursor: pointer;
+
+  /* transition-property: background-color, color, border-color;
+  transition-duration: 1000ms;
+  transition-timing-function: ease;
+  transition-delay: 2500ms;
+
+  transition: background-color var(--anim-fast), color var(--anim-fast),
+    border-color var(--anim-fast); */
+}
+
+.btn:hover {
+  /* transition: background-color var(--anim-fast), color var(--anim-fast),
+    border-color var(--anim-fast); */
+
+  background-color: white;
+  color: violet;
+  border-color: violet;
+}
+
+/**
+  |============================
+  | Центрування абсолютно позиціонованих елементів
+  |============================
+*/
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 400px;
+  height: 500px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+
+  width: 30px;
+  height: 30px;
+
+  border-radius: 50%;
+  border: 1px solid black;
+
+  background-color: darkorchid;
+  cursor: pointer;
+}
