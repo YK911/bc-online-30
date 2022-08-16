@@ -517,22 +517,22 @@
         <div class="container contacts-container">
           <section class="booking">
             <h2 class="title title-theme-dark">Online-booking</h2>
-            <form>
-              <div>
-                <label>
-                  <span>name*</span>
-                  <input type="text" />
+            <form class="booking-form" name="booking-form">
+              <div class="booking-form-group">
+                <label class="booking-form-field">
+                  <span class="booking-form-label">name*</span>
+                  <input class="booking-form-input" type="text" name="user-name" />
                 </label>
-                <label>
-                  <span>phone*</span>
-                  <input type="text" />
+                <label class="booking-form-field">
+                  <span class="booking-form-label">phone*</span>
+                  <input class="booking-form-input" type="tel" name="user-phone" />
                 </label>
               </div>
-              <label>
-                <span>message</span>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
+              <label class="booking-form-group">
+                <span class="booking-form-label">message</span>
+                <textarea class="booking-form-massage" name="user-message" rows="5"></textarea>
               </label>
-              <button type="submit">send</button>
+              <button class="btn btn-theme-dark" type="submit">send</button>
             </form>
           </section>
           <section class="contacts" id="contacts">
