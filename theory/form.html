@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="stylesheet" href="./form.css" />
+  </head>
+  <body>
+    <!-- Form elements -->
+    <form class="registration-form" name="registration-form" autocomplete="off">
+      <div>
+        <label for="user-name">Name</label>
+        <input type="text" id="user-name" name="user-name" minlength="2" maxlength="8" required />
+      </div>
+
+      <label>
+        Phone
+        <input type="tel" name="user-phone" />
+      </label>
+
+      <label>
+        Mail
+        <input type="email" name="user-email" title="Write smth..." />
+      </label>
+
+      <!-- <label>
+        Password
+        <input type="password" name="user-pass" minlength="3" maxlength="12" />
+      </label> -->
+
+      <!-- <div>
+        <p>Radio buttons</p>
+        <label>
+          Small
+          <input type="radio" name="user-size" value="small" />
+        </label>
+        <label>
+          Medium
+          <input type="radio" name="user-size" value="medium" />
+        </label>
+        <label>
+          Large
+          <input type="radio" name="user-size" value="large" />
+        </label>
+      </div> -->
+
+      <label>
+        Я приймаю умови підписки
+        <input type="checkbox" name="user-agreement" checked />
+      </label>
+
+      <label>
+        Введіть кількість
+        <input
+          class="registration-input"
+          type="number"
+          name="user-quantity"
+          min="-5"
+          max="5"
+          value="0"
+          step="1"
+        />
+      </label>
+
+      <label>
+        Phone
+        <input
+          class="registration-input"
+          type="tel"
+          name="user-phone"
+          placeholder="099 99 99 999"
+        />
+      </label>
+
+      <textarea name="" id="" cols="30" rows="10"></textarea>
+
+      <div>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </div>
+    </form>
+  </body>
+</html>
