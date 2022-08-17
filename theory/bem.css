@@ -1,0 +1,90 @@
+body {
+  color: #eeeeee;
+}
+
+/* Block HEADER start */
+.header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  color: #ffffff;
+
+  background-color: #ffffff;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.header--theme-dark {
+  background-color: #2f303a;
+  border-color: #5b5b5b;
+}
+
+.header__logo {
+  margin-right: 93px;
+}
+/* Block HEADER end */
+
+/* Block LOGO start */
+.logo {
+  font-family: 'Raleway';
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 31px;
+  letter-spacing: 0.03em;
+  color: #2196f3;
+}
+
+.logo--dark {
+  color: #000000;
+}
+/* Elements logo */
+.logo__part {
+  font-family: 'Mantserrat';
+}
+
+.logo__part--dark {
+  color: #000000;
+}
+
+.logo__part--light {
+  color: #ffffff;
+}
+/* Block LOGO end */
+
+/* Block FOOTER start */
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  background-color: #2f303a;
+}
+
+.footer__logo {
+  margin-bottom: 20px;
+}
+/* Block FOOTER end */
+
+/* Block Product */
+.product {
+  width: 200px;
+  border: 1px solid grey;
+}
+
+.product__label {
+  padding: 10px;
+  border-radius: 20px;
+
+  font-size: 12px;
+  line-height: 1.5;
+  text-transform: uppercase;
+  color: white;
+
+  background-color: rgb(86, 86, 86);
+}
+
+.product__label--top-sale {
+  background-color: rgb(255, 136, 0);
+}
+
+.product__label--discount {
+  background-color: rgba(255, 55, 0, 0.891);
+}

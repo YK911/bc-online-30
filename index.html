@@ -33,41 +33,44 @@
     <!-- Custom styles -->
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
-  <body>
     <!-- Header section -->
     <header class="header" data-header>
-      <div class="container header-container">
-        <a class="header-link" href="">
+      <div class="container header__container">
+
+        <a class="logo header__logo" href="">
           <img
-            class="header-logo"
+            class="logo__img"
             src="./images/header/page-logo.png"
             alt="BarberSop logo"
             width="68"
             height="56"
           />
         </a>
-        <nav class="header-nav">
-          <ul class="list header-list">
-            <li class="header-item" id="item">
-              <a class="header-nav-link link" href="#about">About</a>
+
+        <nav class="nav">
+          <ul class="nav__list list">
+            <li class="nav__item" id="item">
+              <a class="nav__link link" href="#about">About</a>
             </li>
-            <li class="header-item">
-              <a class="header-nav-link link" href="#price">Services and prices</a>
+            <li class="nav__item">
+              <a class="nav__link link" href="#price">Services and prices</a>
             </li>
-            <li class="header-item">
-              <a class="header-nav-link link" href="#team">Barbers</a>
+            <li class="nav__item">
+              <a class="nav__link link" href="#team">Barbers</a>
             </li>
-            <li class="header-item">
-              <a class="header-nav-link link" href="#contacts">Contacts</a>
+            <li class="nav__item">
+              <a class="nav__link link" href="#contacts">Contacts</a>
             </li>
           </ul>
         </nav>
-        <div class="header-group">
-          <a class="header-contact link" href="tel:+380441111111">+38 044 111 11 11</a>
-          <button class="btn btn-theme-dark" type="button" data-modal-open>Online-booking</button>
+
+        <div class="header__group">
+          <a class="header__contact link" href="tel:+380441111111">+38 044 111 11 11</a>
+          <button class="btn btn--theme-dark" type="button" data-modal-open>Online-booking</button>
         </div>
       </div>
     </header>
+
     <!-- Main section -->
     <main>
       <!-- Hero section -->
@@ -84,12 +87,12 @@
             </ul>
           </div>
           <div class="hero-right-side">
-            <p class="uppertitle uppertitle-theme-dark">A hair salon for men in Kyiv</p>
-            <h1 class="main-title animate__animated animate__flipInX animate__delay-2s"
-              >BarberShop</h1
-            >
-            <p class="hero-undertitle undertitle undertitle-theme-dark"
-              >We are experts in trendy men’s haircuts. We work quickly, carefully and with style.
+            <p class="uppertitle uppertitle--theme-dark ">A hair salon for men in Kyiv</p>
+            <h1 class="main-title animate__animated animate__flipInX animate__delay-2s">
+              BarberShop
+            </h1>
+            <p class="hero-undertitle undertitle undertitle--theme-dark">
+              We are experts in trendy men’s haircuts. We work quickly, carefully and with style.
             </p>
           </div>
 
@@ -134,8 +137,8 @@
           <div class="about-rigth-side">
             <p class="uppertitle">About</p>
             <h2 class="title">Best Barbershop in your city</h2>
-            <p class="about-undertitle undertitle"
-              >If you want to add more confidence to your image, you should definitely visit us.
+            <p class="about-undertitle undertitle">
+              If you want to add more confidence to your image, you should definitely visit us.
             </p>
             <p class="about-desc">
               We are a team that never stops at what has been achieved
@@ -151,8 +154,8 @@
       <!-- Price section -->
       <section class="price section" id="price">
         <div class="container">
-          <p class="uppertitle uppertitle-theme-dark">spend your time with the best masters</p>
-          <h2 class="title title-theme-dark">Services and prices</h2>
+          <p class="uppertitle uppertitle--theme-dark">spend your time with the best masters</p>
+          <h2 class="title title--theme-dark">Services and prices</h2>
           <div class="price-block">
             <ul class="price-list list">
               <li class="price-item">
@@ -199,7 +202,7 @@
               </li>
             </ul>
           </div>
-          <button class="price-btn btn btn-theme-dark" type="button">online-booking</button>
+          <button class="price-btn btn btn--theme-dark" type="button">online-booking</button>
         </div>
       </section>
       <!-- Benefits section -->
@@ -241,7 +244,7 @@
           <p class="uppertitle">for true enjoyers of the atmosphere</p>
           <h2 class="team-title title">Our barbers</h2>
           <ul class="team-list card-set list">
-            <li class="team-item card-set-item">
+            <li class="team-item card-set__item">
               <img src="./images/team/team-1.jpg" alt="John Smith" width="370" height="346" />
               <div class="team-wrap">
                 <h3 class="team-name">John Smith</h3>
@@ -302,7 +305,7 @@
                 </ul>
               </div>
             </li>
-            <li class="team-item card-set-item">
+            <li class="team-item card-set__item">
               <img src="./images/team/team-2.jpg" alt="Michele Doe" width="370" height="346" />
               <div class="team-wrap">
                 <h3 class="team-name">Michele Doe</h3>
@@ -371,7 +374,7 @@
                 </ul>
               </div>
             </li>
-            <li class="team-item card-set-item">
+            <li class="team-item card-set__item">
               <img src="./images/team/team-3.jpg" alt="Alan Black" width="370" height="346" />
               <div class="team-wrap">
                 <h3 class="team-name">Alan Black</h3>
@@ -430,12 +433,14 @@
                       aria-label="LinkedIn"
                       target="_blank"
                       rel="nofollow noopener noreferrer"
-                      ><img
+                    >
+                      <img
                         src="./images/team/linkedin.png"
                         alt="LinkedIn icon"
                         width="44"
                         height="44"
-                    /></a>
+                      />
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -449,7 +454,7 @@
           <p class="gallery-uppertitle uppertitle">in Latin, "barba" means "beard"</p>
           <h2 class="visually-hidden">Our gallery</h2>
           <ul class="gallery-list card-set list">
-            <li class="gallery-item card-set-item">
+            <li class="gallery-item card-set__item">
               <img
                 class="gallery-img"
                 src="./images/gallery/gallery-img-1.jpg"
@@ -458,13 +463,13 @@
                 height="360"
               />
               <div class="gallery-wrap">
-                <p class="gallery-desc"
-                  >Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ea molestias
-                  beatae pariatur ratione in, ab nam enim voluptatem.</p
-                >
+                <p class="gallery-desc">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ea molestias
+                  beatae pariatur ratione in, ab nam enim voluptatem.
+                </p>
               </div>
             </li>
-            <li class="gallery-item card-set-item">
+            <li class="gallery-item card-set__item">
               <img
                 class="gallery-img"
                 src="./images/gallery/gallery-img-2.jpg"
@@ -473,13 +478,13 @@
                 height="360"
               />
               <div class="gallery-wrap">
-                <p class="gallery-desc"
-                  >Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ea molestias
-                  beatae pariatur ratione in, ab nam enim voluptatem.</p
-                >
+                <p class="gallery-desc">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ea molestias
+                  beatae pariatur ratione in, ab nam enim voluptatem.
+                </p>
               </div>
             </li>
-            <li class="gallery-item card-set-item">
+            <li class="gallery-item card-set__item">
               <img
                 class="gallery-img"
                 src="./images/gallery/gallery-img-3.jpg"
@@ -488,13 +493,13 @@
                 height="360"
               />
               <div class="gallery-wrap">
-                <p class="gallery-desc"
-                  >Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ea molestias
-                  beatae pariatur ratione in, ab nam enim voluptatem.</p
-                >
+                <p class="gallery-desc">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ea molestias
+                  beatae pariatur ratione in, ab nam enim voluptatem.
+                </p>
               </div>
             </li>
-            <li class="gallery-item card-set-item">
+            <li class="gallery-item card-set__item">
               <img
                 class="gallery-img"
                 src="./images/gallery/gallery-img-4.jpg"
@@ -503,20 +508,20 @@
                 height="360"
               />
               <div class="gallery-wrap">
-                <p class="gallery-desc"
-                  >Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ea molestias
-                  beatae pariatur ratione in, ab nam enim voluptatem.</p
-                >
+                <p class="gallery-desc">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ea molestias
+                  beatae pariatur ratione in, ab nam enim voluptatem.
+                </p>
               </div>
             </li>
-          </ul></div
-        >
+          </ul>
+        </div>
       </section>
       <!-- Booking & Contatcs sections -->
       <div class="contatcs-group section">
         <div class="container contacts-container">
           <section class="booking">
-            <h2 class="title title-theme-dark">Online-booking</h2>
+            <h2 class="title title--theme-dark">Online-booking</h2>
             <form class="booking-form" name="booking-form">
               <div class="booking-form-group">
                 <label class="booking-form-field">
@@ -546,10 +551,6 @@
                     required
                   />
                   <span class="booking-form-label">phone*</span>
-                  <!-- <svg class="info-icons" width="16" height="16">
-                    <use class="warning-icon" href="./images/sprite.svg#icon-warning"></use>
-                    <use class="success-icon" href="./images/sprite.svg#icon-success"></use>
-                  </svg> -->
                 </label>
               </div>
               <label class="booking-form-massage">
@@ -561,11 +562,11 @@
                 ></textarea>
                 <span class="booking-form-label">message</span>
               </label>
-              <button class="btn btn-theme-dark" type="submit">send</button>
+              <button class="btn btn--theme-dark" type="submit">send</button>
             </form>
           </section>
           <section class="contacts" id="contacts">
-            <h2 class="title title-theme-dark">Contacts</h2>
+            <h2 class="title title--theme-dark">Contacts</h2>
             <address class="contacts-address">
               <ul class="contacts-list list">
                 <li class="contacts-item">
@@ -593,8 +594,9 @@
                 <li class="contacts-item">
                   <a class="contacts-link link" href="mailto:barbershop@email.com">
                     <svg class="contacts-icon" width="24" height="24">
-                      <use href="./images/sprite.svg#mail"></use></svg
-                    >barbershop@email.com
+                      <use href="./images/sprite.svg#mail"></use>
+                    </svg>
+                    barbershop@email.com
                   </a>
                 </li>
               </ul>
@@ -625,7 +627,7 @@
       </div>
     </footer>
     <!-- Modal window -->
-    <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop backdrop--hidden" data-modal>
       <div class="modal">
         <button class="modal-btn" type="button" data-modal-close>
           <svg class="modal-icon" width="15" height="15">
@@ -678,11 +680,11 @@
               <use class="icon-uncheck" href="./images/sprite.svg#unchecked"></use>
               <use class="icon-check" href="./images/sprite.svg#checked"></use>
             </svg>
-            <span class="register-agreement-text"
-              >Agree with the mailing and accept
-              <a class="register-agreement-link" href="" target="_blank"
-                >the Terms of the Agreement</a
-              >
+            <span class="register-agreement-text">
+              Agree with the mailing and accept
+              <a class="register-agreement-link" href="" target="_blank">
+                the Terms of the Agreement
+              </a>
             </span>
           </label>
 
