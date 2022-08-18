@@ -1,0 +1,84 @@
+/**
+  |============================
+  | Price
+  |============================
+*/
+.price {
+  @extend %section;
+
+  max-width: 1280px;
+  background-color: var(--dark-bg-cl);
+  background-image: url(../images/price/price-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.price--centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.price__block {
+  display: flex;
+  margin-bottom: 50px;
+
+  perspective: 1000px;
+}
+
+.price-list {
+  @extend %list;
+
+  flex-basis: 50%;
+  padding: 30px 40px;
+
+  transition: transform var(--anim-fast);
+}
+
+.price-list:first-child {
+  background-image: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+
+  transform: rotateY(15deg);
+  transform-origin: left center;
+}
+
+.price-list:last-child {
+  background-image: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+
+  transform: rotateY(-15deg);
+  transform-origin: right center;
+}
+
+.price-list:hover {
+  transform: rotate(0);
+}
+
+.price-list__item {
+  color: var(--grey-cl);
+
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.price-list__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.price-list__item::before {
+  content: '';
+  flex-grow: 1;
+
+  height: 1px;
+  background-color: var(--grey-cl-12);
+}
+
+.price-list__meta {
+  order: -1;
+}
+
+.price__btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -1,0 +1,25 @@
+/* form */
+.booking-form-group {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.booking-form-field {
+  position: relative;
+  margin-bottom: 44px;
+}
+
+.booking-form-field:first-child {
+  width: 270px;
+}
+.booking-form-field:last-child {
+  flex-basis: 260px;
+}
+
+// svg styles
+.info-icons {
+  position: absolute;
+  bottom: 4px;
+  right: 0;
+}

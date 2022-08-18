@@ -1,0 +1,61 @@
+@import './decimals';
+
+@mixin section($p-top: 130px, $p-bottom: 130px) {
+  padding-top: $p-top;
+  padding-bottom: $p-bottom;
+}
+
+@mixin fonts($fs, $lh, $fw: false, $ls: null) {
+  @if ($fw) {
+    font-weight: $fw;
+  }
+  font-size: $fs;
+  line-height: decimal-round($lh / $fs);
+  letter-spacing: $ls;
+}
+
+$colors: (
+  'primary': #8e3329,
+  'accent': #d98328,
+  'secondary': #5a1321,
+  'foreground': #191919,
+  'background': #e9e9e9,
+);
+
+$brightness: (
+  '100': 0.1,
+  '200': 0.2,
+  '300': 0.3,
+  '400': 0.4,
+);
+
+@each $colors in $list {
+  .bg-#{$var} {
+    background-color: rgba(map-get($list, $var));
+  }
+}
+
+@function getColor($key) {
+  @return map-get($colors, $key);
+}
+
+@mixin font-face(
+  $ff: 'Rouble',
+  $file-name: 'rouble',
+  $weight: (
+    400,
+  )
+) {
+  @for $i from 1 through length($weight) {
+    @font-face {
+      font-style: normal;
+      font-weight: nth($weight, $i);
+      font-family: $ff;
+      font-display: swap;
+      src: url('../fonts/#{$file-name}-#{nth($weight, $i)}.woff2') format('woff2'),
+        url('../fonts/#{$file-name}-#{nth($weight, $i)}.woff') format('woff');
+    }
+  }
+}
+
+@include font-face('Formular', 'formular', (400, 500, 700));
