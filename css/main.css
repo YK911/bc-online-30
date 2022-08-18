@@ -93,6 +93,27 @@
   padding-bottom: 130px;
 }
 
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Formular";
+  font-display: swap;
+  src: url("../fonts/formular-400.woff2") format("woff2"), url("../fonts/formular-400.woff") format("woff");
+}
+@font-face {
+  font-style: normal;
+  font-weight: 500;
+  font-family: "Formular";
+  font-display: swap;
+  src: url("../fonts/formular-500.woff2") format("woff2"), url("../fonts/formular-500.woff") format("woff");
+}
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  font-family: "Formular";
+  font-display: swap;
+  src: url("../fonts/formular-700.woff2") format("woff2"), url("../fonts/formular-700.woff") format("woff");
+}
 /**
   |============================
   | Base styles
