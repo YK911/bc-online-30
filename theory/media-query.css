@@ -1,0 +1,120 @@
+@media print {
+  body {
+    font-size: 20px;
+  }
+}
+
+/*
+all - всі пристрої
+print - принтери і пристрої, які виводять сторінку на друк
+screen - пристрої з фізичним екраном
+*/
+/*
+@media screen and (min-width: 400px) and (max-width: 800px) {
+  body {
+    background-color: tomato;
+  }
+} */
+
+/* body {
+  background-color: tomato;
+} */
+
+/* @media screen and (max-width: 400px), (min-width: 800px) {
+  body {
+    background-color: teal;
+  }
+} */
+
+/**
+  |============================
+  | Налаштування контейнера
+  |============================
+*/
+/*
+breakpoints:
+
+mobile - 480px
+0 - 479px
+480px - 767px
+
+tablet - 768px
+768px - infinity
+768px - 1199px
+
+desktop - 1200px
+1200px - infinity
+
+*/
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+  outline: 2px solid red;
+  outline-offset: -2px;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 448px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 720px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
+
+/**
+  |============================
+  | Mobile first
+  |============================
+*/
+
+.title {
+  font-size: 28px;
+  line-height: 1.17;
+  letter-spacing: 0.05em;
+
+  color: #303030;
+}
+
+@media screen and (min-width: 1200px) {
+  .title {
+    font-size: 42px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .img-list {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .img-list {
+    display: flex;
+  }
+}
+
+/* mobile menu */
+.mobile-menu {
+  width: 100%;
+  background-color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
+}

@@ -4,9 +4,9 @@
   |============================
 */
 .about {
-  // @extend %section;
+  // @include section;
 
-  @include section($p-bottom: 100px);
+  @include section;
 }
 
 .about__container {
