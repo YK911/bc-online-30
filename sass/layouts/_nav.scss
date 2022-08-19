@@ -1,10 +1,20 @@
-/* Block navigation  */
+.nav {
+  @include mq(mob-only) {
+    display: none;
+  }
+}
+
 .nav__list {
   @extend %list;
 
   display: flex;
   align-items: center;
-  gap: 30px;
+
+  gap: 16px;
+
+  @include mq(desk) {
+    gap: 30px;
+  }
 }
 
 .nav__link {
