@@ -1,8 +1,14 @@
 # bc-online-30
 
-Заняття 8:
+Заняття 10:
 
-B(lock)E(lement)M(odifire)
+- Медіа-запити: media-type та media-feature
+- Медіа-функції min-width та max-width
+- Логічні оператори: and, not, or
+- Метатег viewport. Атрибути width=device-width та initial-scale
+- Chrome DevTools для роботи з мобільною версткою
+- Адаптива і респонсивна верстка
+- Підхід mobile-first CSS
 
 ---
 

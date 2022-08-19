@@ -31,24 +31,28 @@
     />
 
     <!-- Custom styles -->
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
+    <!-- <link rel="stylesheet" href="./css/styles.css" /> -->
   </head>
+  <body>
     <!-- Header section -->
     <header class="header" data-header>
       <div class="container header__container">
-
         <a class="logo header__logo" href="">
-          <img
-            class="logo__img"
-            src="./images/header/page-logo.png"
-            alt="BarberSop logo"
-            width="68"
-            height="56"
-          />
+          <svg class="logo__img" width="68" height="56">
+            <use href="./images/sprite.svg#logo"></use>
+          </svg>
         </a>
 
+        <!-- burger menu -->
+        <button class="mobile-btn js-open-menu" aria-expanded="false">
+          <svg class="mobile-btn-icon" width="24" height="16">
+            <use href="./images/sprite.svg#menu-burger"></use>
+          </svg>
+        </button>
+
         <nav class="nav">
-          <ul class="nav__list list">
+          <ul class="nav__list">
             <li class="nav__item" id="item">
               <a class="nav__link link" href="#about">About</a>
             </li>
@@ -74,59 +78,61 @@
     <!-- Main section -->
     <main>
       <!-- Hero section -->
-      <section class="hero">
-        <div class="container hero-container">
-          <div class="hero-left-side">
-            <ul class="hero-media-list media-list list">
-              <li class="media-item">
-                <a class="media-link link" href="">Instagram</a>
+      <!-- <section class="hero">
+        <div class="hero__container container">
+          <div class="hero__left-side">
+            <ul class="hero__media-list media-list list">
+              <li class="media-list__item">
+                <a class="media-list__link link" href="">Instagram</a>
               </li>
-              <li class="media-item">
-                <a class="media-link link" href="">Youtube</a>
+              <li class="media-list__item">
+                <a class="media-list__link link" href="">Youtube</a>
               </li>
             </ul>
           </div>
-          <div class="hero-right-side">
-            <p class="uppertitle uppertitle--theme-dark ">A hair salon for men in Kyiv</p>
+          <div class="hero__right-side">
+            <p class="uppertitle uppertitle--theme-dark">A hair salon for men in Kyiv</p>
             <h1 class="main-title animate__animated animate__flipInX animate__delay-2s">
               BarberShop
             </h1>
-            <p class="hero-undertitle undertitle undertitle--theme-dark">
+            <p class="hero__undertitle undertitle undertitle--theme-dark">
               We are experts in trendy men’s haircuts. We work quickly, carefully and with style.
             </p>
           </div>
 
-          <ul class="slider-list list">
-            <li class="slider-item">
-              <button class="slider-btn disabled" type="button">Back</button>
-            </li>
-            <li class="slider-item">
-              <button class="slider-btn" type="button">Forward</button>
-            </li>
-          </ul>
-          <ul class="slider-pagination list">
-            <li class="slider-pagination-item active"></li>
-            <li class="slider-pagination-item"></li>
-            <li class="slider-pagination-item"></li>
-          </ul>
+          <div class="slider">
+            <ul class="slider__controls list">
+              <li class="slider__item">
+                <button class="slider__btn slider__btn--disabled" type="button">Back</button>
+              </li>
+              <li class="slider__item">
+                <button class="slider__btn" type="button">Forward</button>
+              </li>
+            </ul>
+            <ul class="slider__pagination list">
+              <li class="slider__pagination-item slider-pagination-item--active"></li>
+              <li class="slider__pagination-item"></li>
+              <li class="slider__pagination-item"></li>
+            </ul>
+          </div>
         </div>
-      </section>
+      </section> -->
       <!-- About section -->
-      <section class="about section" id="about">
-        <div class="container about-container">
-          <ul class="about-list list">
-            <li class="about-item">
+      <!-- <section class="about" id="about">
+        <div class="about__container container">
+          <ul class="about__list">
+            <li class="about__item">
               <img
-                class="about-img"
+                class="about__img"
                 src="./images/about/img-1.jpg"
                 alt="Beard shaving"
                 width="270"
                 height="445"
               />
             </li>
-            <li class="about-item">
+            <li class="about__item">
               <img
-                class="about-img"
+                class="about__img"
                 src="./images/about/img-2.jpg"
                 alt="Haircut"
                 width="270"
@@ -134,13 +140,13 @@
               />
             </li>
           </ul>
-          <div class="about-rigth-side">
+          <div class="about__right-side">
             <p class="uppertitle">About</p>
             <h2 class="title">Best Barbershop in your city</h2>
-            <p class="about-undertitle undertitle">
+            <p class="about__undertitle undertitle">
               If you want to add more confidence to your image, you should definitely visit us.
             </p>
-            <p class="about-desc">
+            <p class="about__desc">
               We are a team that never stops at what has been achieved
               and&nbsp;are&nbsp;thirsty&nbsp;for changes. And when you fall into the hands of our
               master, you will never be the same again. We are a team that is always "on the same
@@ -150,63 +156,55 @@
             <button class="btn" type="button">online-booking</button>
           </div>
         </div>
-      </section>
+      </section> -->
       <!-- Price section -->
-      <section class="price section" id="price">
+      <!-- <section class="price price--centered" id="price">
         <div class="container">
           <p class="uppertitle uppertitle--theme-dark">spend your time with the best masters</p>
           <h2 class="title title--theme-dark">Services and prices</h2>
-          <div class="price-block">
-            <ul class="price-list list">
-              <li class="price-item">
-                <span class="price-meta">Men’s haircut</span>
-                <span class="price-line"></span>
-                <span class="price-cost">from 300 uah.</span>
+          <div class="price__block">
+            <ul class="price-list">
+              <li class="price-list__item">
+                <span class="price-list__meta">Men’s haircut</span>
+                <span class="price-list__cost">from 300 uah.</span>
               </li>
-              <li class="price-item">
-                <span class="price-meta">Beard trim </span>
-                <span class="price-line"></span>
-                <span class="price-cost">from 300 uah.</span>
+              <li class="price-list__item">
+                <span class="price-list__meta">Beard trim </span>
+                <span class="price-list__cost">from 300 uah.</span>
               </li>
-              <li class="price-item">
-                <span class="price-meta">Mustache trim</span>
-                <span class="price-line"></span>
-                <span class="price-cost">from 200 uah.</span>
+              <li class="price-list__item">
+                <span class="price-list__meta">Mustache trim</span>
+                <span class="price-list__cost">from 200 uah.</span>
               </li>
-              <li class="price-item">
-                <span class="price-meta">Straight razor shave </span>
-                <span class="price-line"></span>
-                <span class="price-cost">from 200 uah.</span>
+              <li class="price-list__item">
+                <span class="price-list__meta">Straight razor shave </span>
+                <span class="price-list__cost">from 200 uah.</span>
               </li>
             </ul>
-            <ul class="price-list list">
-              <li class="price-item">
-                <span class="price-meta">Trainee’s haircut</span>
-                <span class="price-line"></span>
-                <span class="price-cost">from 50 uah.</span>
+            <ul class="price-list">
+              <li class="price-list__item">
+                <span class="price-list__meta">Trainee’s haircut</span>
+                <span class="price-list__cost">from 50 uah.</span>
               </li>
-              <li class="price-item">
-                <span class="price-meta">Haircut under the nozzle</span>
-                <span class="price-line"></span>
-                <span class="price-cost">from 200 uah.</span>
+              <li class="price-list__item">
+                <span class="price-list__meta">Haircut under the nozzle</span>
+                <span class="price-list__cost">from 200 uah.</span>
               </li>
-              <li class="price-item">
-                <span class="price-meta">Children’s haircut (0-12 y.o.)</span>
-                <span class="price-line"></span>
-                <span class="price-cost">from 300 uah.</span>
+              <li class="price-list__item">
+                <span class="price-list__meta">Children’s haircut (0&#8209;12&nbsp;y.o.)</span>
+                <span class="price-list__cost">from 300&nbsp;uah.</span>
               </li>
-              <li class="price-item">
-                <span class="price-meta">Camouflage of gray hair</span>
-                <span class="price-line"></span>
-                <span class="price-cost">from 200 uah.</span>
+              <li class="price-list__item">
+                <span class="price-list__meta">Camouflage of gray hair</span>
+                <span class="price-list__cost">from 200 uah.</span>
               </li>
             </ul>
           </div>
-          <button class="price-btn btn btn--theme-dark" type="button">online-booking</button>
+          <button class="price__btn btn btn--theme-dark" type="button">online-booking</button>
         </div>
-      </section>
+      </section> -->
       <!-- Benefits section -->
-      <section class="benefits section">
+      <!-- <section class="benefits">
         <div class="container benefits-container">
           <div class="benefits-left-side">
             <ul class="benefits-list list">
@@ -237,9 +235,9 @@
             </p>
           </div>
         </div>
-      </section>
+      </section> -->
       <!-- Team section -->
-      <section class="team section" id="team">
+      <!-- <section class="team" id="team">
         <div class="container">
           <p class="uppertitle">for true enjoyers of the atmosphere</p>
           <h2 class="team-title title">Our barbers</h2>
@@ -447,9 +445,9 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
       <!-- Gallery section -->
-      <section class="gallery section">
+      <!-- <section class="gallery">
         <div class="container">
           <p class="gallery-uppertitle uppertitle">in Latin, "barba" means "beard"</p>
           <h2 class="visually-hidden">Our gallery</h2>
@@ -516,9 +514,9 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
       <!-- Booking & Contatcs sections -->
-      <div class="contatcs-group section">
+      <!-- <div class="contatcs-group">
         <div class="container contacts-container">
           <section class="booking">
             <h2 class="title title--theme-dark">Online-booking</h2>
@@ -610,22 +608,22 @@
             </div>
           </section>
         </div>
-      </div>
+      </div> -->
     </main>
     <!-- Footer section -->
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="container footer-container">
         <p class="footer-copyright">&#169; Copyright 2020</p>
         <ul class="footer-media-list media-list list">
-          <li class="media-item">
-            <a class="footer-link media-link link" href="">Instagram</a>
+          <li class="media-list__item">
+            <a class="footer-link media-list__link link" href="">Instagram</a>
           </li>
-          <li class="media-item">
-            <a class="footer-link media-link link" href="">Youtube</a>
+          <li class="media-list__item">
+            <a class="footer-link media-list__link link" href="">Youtube</a>
           </li>
         </ul>
       </div>
-    </footer>
+    </footer> -->
     <!-- Modal window -->
     <div class="backdrop backdrop--hidden" data-modal>
       <div class="modal">
@@ -698,8 +696,57 @@
       </div>
     </div>
 
+    <div class="backdrop backdrop--hidden js-menu-container">
+      <div class="mobile-menu">
+        <button class="mobile-menu-btn js-close-menu" type="button">
+          <svg width="19" height="19">
+            <use href="./images/sprite.svg#menu-close"></use>
+          </svg>
+        </button>
+
+        <ul class="mobile-menu-list">
+          <li class="mobile-menu-item">
+            <a href="" class="mobile-menu-link link">About</a>
+          </li>
+          <li class="mobile-menu-item">
+            <a href="" class="mobile-menu-link link">Contacts</a>
+          </li>
+          <li class="mobile-menu-item">
+            <a href="" class="mobile-menu-link link">Services and prices</a>
+          </li>
+          <li class="mobile-menu-item">
+            <a href="" class="mobile-menu-link link">Barbers</a>
+          </li>
+        </ul>
+
+        <div class="mobile-menu-group">
+          <a class="mobile-menu-link link" href="">+38 044 111 11 11</a>
+          <button class="btn mobile-menu-group-btn" type="button">online-booking</button>
+        </div>
+
+        <ul class="mobile-media-list">
+          <li class="mobile-media-item">
+            <a href="" class="mobile-media-link link">Instagram</a>
+          </li>
+          <li class="mobile-media-item">
+            <a href="" class="mobile-media-link link">Youtube</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
     <script src="./js/header-scroll.js"></script>
     <script src="./js/modal.js"></script>
+
+    <!-- Бібліотека для правильного блокування скролу (додаємо перед скриптом для моб.меню) -->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./js/mobile-menu.js"></script>
 
     <!-- Add Input mask https://github.com/RobinHerbots/Inputmask -->
     <script

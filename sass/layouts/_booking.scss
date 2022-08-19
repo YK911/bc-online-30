@@ -1,0 +1,19 @@
+.contatcs-group {
+  @include section;
+
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+
+  background-color: var(--dark-bg-cl);
+
+  background-image: url(../images/contatcs/contacts-bg.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center right;
+}
+
+.contacts-container {
+  display: flex;
+  justify-content: space-between;
+}
