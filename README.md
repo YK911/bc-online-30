@@ -1,6 +1,6 @@
 # bc-online-30
 
-Заняття 8:
+Заняття 9:
 
 B(lock)E(lement)M(odifire)
 
