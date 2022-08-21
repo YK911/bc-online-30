@@ -7,13 +7,15 @@
 
   background-color: var(--dark-bg-cl);
 
-  background-image: url(../images/contatcs/contacts-bg.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center right;
+  // background-image: url(../images/contatcs/contacts-bg.png);
 }
 
 .contacts-container {
-  display: flex;
-  justify-content: space-between;
+  @include mq(desk) {
+    display: flex;
+    justify-content: space-between;
+  }
 }

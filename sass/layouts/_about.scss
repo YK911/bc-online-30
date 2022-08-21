@@ -1,11 +1,4 @@
-/**
-  |============================
-  | About
-  |============================
-*/
 .about {
-  // @include section;
-
   @include section;
 }
 
@@ -18,7 +11,12 @@
   @extend %list;
 
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
+
+  @include mq(mob-only) {
+    display: none;
+  }
 }
 
 .about__item {
@@ -34,7 +32,8 @@
 }
 
 .about__right-side {
-  width: 500px;
+  min-width: 330px;
+  max-width: 500px;
 }
 
 .about__undertitle {
@@ -44,11 +43,6 @@
 .about__desc {
   margin-bottom: 40px;
 
-  // font-size: 14px;
-  // line-height: calc(26 / 14);
-  // letter-spacing: 0.02em;
-
   @include fonts(14px, 26px, 500);
-
   color: var(--dark-txt-cl);
 }

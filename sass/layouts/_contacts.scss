@@ -1,11 +1,10 @@
-/**
-|============================
-| Contatcs
-|============================
-*/
 .contacts {
   flex-basis: 570px;
   padding-left: 115px;
+
+  @include mq(mob-only) {
+    @include section;
+  }
 }
 
 .contacts-address {

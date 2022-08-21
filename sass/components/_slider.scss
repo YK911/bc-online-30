@@ -1,4 +1,9 @@
-/* block sliders elements */
+.slider {
+  @include mq(mob-only) {
+    display: none;
+  }
+}
+
 .slider__controls {
   position: absolute;
   bottom: 40px;

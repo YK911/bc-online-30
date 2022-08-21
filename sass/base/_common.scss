@@ -1,16 +1,12 @@
-/**
-  |============================
-  | Base styles
-  |============================
-*/
 body {
+  @include fonts(16px, 26px);
+
   font-family: var(--main-font);
   color: var(--main-txt-cl);
-  // font-size: 18px;
-  // line-height: calc(30 / 18);
-  // letter-spacing: 0.02em;
 
-  @include fonts(18px, 30px);
+  @include mq(desk) {
+    font-size: 18px;
+  }
 }
 
 .section {
@@ -22,10 +18,14 @@ body {
   margin-bottom: 20px;
 
   font-family: var(--secondary-font);
-  font-size: 72px;
+  font-size: 48px;
   line-height: calc(85 / 72);
   letter-spacing: 0.05em;
   color: var(--light-txt-cl);
+
+  @include mq(desk) {
+    font-size: 72px;
+  }
 }
 
 .uppertitle {
