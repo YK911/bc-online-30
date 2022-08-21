@@ -1,23 +1,38 @@
-/* form */
+.booking {
+  @include mq(mob-only) {
+    @include section;
+  }
+}
+
 .booking-form-group {
-  display: flex;
-  align-items: center;
-  gap: 30px;
+  margin-bottom: 44px;
+
+  @include mq(tab) {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
 }
 
 .booking-form-field {
   position: relative;
-  margin-bottom: 44px;
+  display: block;
+
+  &:first-child {
+    @include mq(mob-only) {
+      margin-bottom: 44px;
+    }
+
+    @include mq(tab) {
+      width: 270px;
+    }
+  }
+
+  &:last-child {
+    flex-basis: 260px;
+  }
 }
 
-.booking-form-field:first-child {
-  width: 270px;
-}
-.booking-form-field:last-child {
-  flex-basis: 260px;
-}
-
-// svg styles
 .info-icons {
   position: absolute;
   bottom: 4px;
