@@ -462,19 +462,17 @@ img {
   fill: currentColor;
 }
 
-@media screen and (max-width: 767.98px) {
-  .booking {
-    padding-top: 84px;
-    padding-bottom: 84px;
-  }
+.booking {
+  padding-top: 84px;
+  padding-bottom: 84px;
 }
-@media screen and (max-width: 767.98px) and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .booking {
     padding-top: 100px;
     padding-bottom: 100px;
   }
 }
-@media screen and (max-width: 767.98px) and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .booking {
     padding-top: 130px;
     padding-bottom: 130px;
@@ -496,18 +494,25 @@ img {
   position: relative;
   display: block;
 }
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .booking-form-field {
+    width: 50%;
+  }
+}
 @media screen and (max-width: 767.98px) {
   .booking-form-field:first-child {
     margin-bottom: 44px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .booking-form-field:first-child {
     width: 270px;
   }
 }
-.booking-form-field:last-child {
-  flex-basis: 260px;
+@media screen and (min-width: 1200px) {
+  .booking-form-field:last-child {
+    flex-basis: 260px;
+  }
 }
 
 .info-icons {
@@ -1221,7 +1226,6 @@ img {
   padding-bottom: 84px;
   max-width: 1280px;
   background-color: var(--dark-bg-cl);
-  background-image: url(../images/price/price-bg.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1336,11 +1340,6 @@ img {
   margin-right: auto;
 }
 
-/**
-  |============================
-  | Benefits
-  |============================
-*/
 .benefits {
   padding-top: 84px;
   padding-bottom: 84px;
@@ -1360,6 +1359,12 @@ img {
 
 .benefits-container {
   display: flex;
+  flex-direction: column-reverse;
+}
+@media screen and (min-width: 1200px) {
+  .benefits-container {
+    flex-direction: row;
+  }
 }
 
 .benefits-left-side {
@@ -1367,12 +1372,22 @@ img {
 }
 
 .benefits-list {
-  width: 370px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 370px;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
+  justify-content: center;
+  margin-left: auto;
+}
+@media screen and (max-width: 767.98px) {
+  .benefits-list {
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .benefits-list {
+    margin-right: auto;
+  }
 }
 
 .benefits-item {
@@ -1382,10 +1397,19 @@ img {
   text-align: center;
   background: var(--light-bg-cl);
 }
-
-.benefits-item:nth-child(2n) {
-  margin-top: 30px;
-  margin-left: 30px;
+.benefits-item:not(:last-child) {
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 480px) {
+  .benefits-item:not(:last-child) {
+    margin: 0;
+  }
+}
+@media screen and (min-width: 480px) {
+  .benefits-item:nth-child(2n) {
+    margin-top: 30px;
+    margin-left: 30px;
+  }
 }
 
 .benefits-quantity {
@@ -1420,7 +1444,12 @@ img {
 }
 
 .benefits-right-side {
-  width: 500px;
+  max-width: 500px;
+}
+@media screen and (max-width: 1199.98px) {
+  .benefits-right-side {
+    margin-bottom: 44px;
+  }
 }
 
 .team {
@@ -1547,8 +1576,6 @@ img {
 }
 
 .contatcs-group {
-  padding-top: 84px;
-  padding-bottom: 84px;
   max-width: 1280px;
   margin-left: auto;
   margin-right: auto;
@@ -1556,18 +1583,6 @@ img {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center right;
-}
-@media screen and (min-width: 768px) {
-  .contatcs-group {
-    padding-top: 100px;
-    padding-bottom: 100px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .contatcs-group {
-    padding-top: 130px;
-    padding-bottom: 130px;
-  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1579,30 +1594,51 @@ img {
 
 .contacts {
   flex-basis: 570px;
-  padding-left: 115px;
+  padding-top: 84px;
+  padding-bottom: 84px;
 }
-@media screen and (max-width: 767.98px) {
-  .contacts {
-    padding-top: 84px;
-    padding-bottom: 84px;
-  }
-}
-@media screen and (max-width: 767.98px) and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .contacts {
     padding-top: 100px;
     padding-bottom: 100px;
   }
 }
-@media screen and (max-width: 767.98px) and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .contacts {
     padding-top: 130px;
     padding-bottom: 130px;
   }
 }
+@media screen and (min-width: 1200px) {
+  .contacts {
+    padding-left: 115px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .contacts-wrap {
+    display: flex;
+    gap: 30px;
+  }
+}
 
 .contacts-address {
-  margin-bottom: 70px;
   font-style: normal;
+}
+@media screen and (max-width: 767.98px) {
+  .contacts-address {
+    margin-bottom: 44px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .contacts-address {
+    width: 330px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts-address {
+    margin-bottom: 70px;
+  }
 }
 
 .contacts-item:not(:last-child) {

@@ -1,7 +1,5 @@
 .booking {
-  @include mq(mob-only) {
-    @include section;
-  }
+  @include section;
 }
 
 .booking-form-group {
@@ -18,18 +16,24 @@
   position: relative;
   display: block;
 
+  @include mq(tab-only) {
+    width: 50%;
+  }
+
   &:first-child {
     @include mq(mob-only) {
       margin-bottom: 44px;
     }
 
-    @include mq(tab) {
+    @include mq(desk) {
       width: 270px;
     }
   }
 
   &:last-child {
-    flex-basis: 260px;
+    @include mq(desk) {
+      flex-basis: 260px;
+    }
   }
 }
 

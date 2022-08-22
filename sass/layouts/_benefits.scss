@@ -1,14 +1,14 @@
-/**
-  |============================
-  | Benefits
-  |============================
-*/
 .benefits {
   @include section;
 }
 
 .benefits-container {
   display: flex;
+  flex-direction: column-reverse;
+
+  @include mq(desk) {
+    flex-direction: row;
+  }
 }
 
 .benefits-left-side {
@@ -16,13 +16,22 @@
 }
 
 .benefits-list {
-  width: 370px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 370px;
 
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
+  justify-content: center;
+
+  margin-left: auto;
+
+  @include mq(mob-only) {
+    margin-right: auto;
+  }
+
+  @include mq(desk) {
+    margin-right: auto;
+  }
 }
 
 .benefits-item {
@@ -33,11 +42,20 @@
   text-align: center;
 
   background: var(--light-bg-cl);
-}
 
-.benefits-item:nth-child(2n) {
-  margin-top: 30px;
-  margin-left: 30px;
+  &:not(:last-child) {
+    margin-bottom: 30px;
+    @include mq(mob) {
+      margin: 0;
+    }
+  }
+
+  &:nth-child(2n) {
+    @include mq(mob) {
+      margin-top: 30px;
+      margin-left: 30px;
+    }
+  }
 }
 
 .benefits-quantity {
@@ -76,5 +94,9 @@
 }
 
 .benefits-right-side {
-  width: 500px;
+  max-width: 500px;
+
+  @include mq(not-desk) {
+    margin-bottom: 44px;
+  }
 }
