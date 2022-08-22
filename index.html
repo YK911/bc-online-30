@@ -122,22 +122,40 @@
         <div class="about__container container">
           <ul class="about__list">
             <li class="about__item">
-              <img
-                class="about__img"
-                src="./images/about/img-1.jpg"
-                alt="Beard shaving"
-                width="270"
-                height="445"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/about/about-1@1x_lg.jpg 1x, ./images/about/about-1@2x_lg.jpg 2x"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/about/about-1@1x_md.jpg 1x, ./images/about/about-1@2x_md.jpg 2x"
+                />
+                <img
+                  class="about__img"
+                  src="./images/about/about-1@1x_md.jpg"
+                  alt="Beard shaving"
+                  loading="lazy"
+                />
+              </picture>
             </li>
             <li class="about__item">
-              <img
-                class="about__img"
-                src="./images/about/img-2.jpg"
-                alt="Haircut"
-                width="270"
-                height="445"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/about/about-2@1x_lg.jpg 1x, ./images/about/about-2@2x_lg.jpg 2x"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/about/about-2@1x_md.jpg 1x, ./images/about/about-2@2x_md.jpg 2x"
+                />
+                <img
+                  class="about__img"
+                  src="./images/about/about-2@1x_md.jpg"
+                  alt="Haircut"
+                  loading="lazy"
+                />
+              </picture>
             </li>
           </ul>
           <div class="about__right-side">
@@ -243,7 +261,27 @@
           <h2 class="team-title title">Our barbers</h2>
           <ul class="team-list card-set list">
             <li class="team-item card-set__item">
-              <img src="./images/team/team-1.jpg" alt="John Smith" width="370" height="346" />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/team/team-1@1x_lg.jpg 1x, images/team/team-1@2x_lg.jpg 2x"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team/team-1@1x_md.jpg 1x, images/team/team-1@2x_md.jpg 2x"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/team/team-1@1x_sm.jpg 1x, images/team/team-1@2x_sm.jpg 2x"
+                />
+                <img
+                  src="./images/team/team-1@1x_sm.jpg"
+                  alt="John Smith"
+                  width="450"
+                  height="346"
+                  loading="lazy"
+                />
+              </picture>
               <div class="team-wrap">
                 <h3 class="team-name">John Smith</h3>
                 <p class="team-position">Extreme Barber</p>
@@ -304,140 +342,162 @@
               </div>
             </li>
             <li class="team-item card-set__item">
-              <img src="./images/team/team-2.jpg" alt="Michele Doe" width="370" height="346" />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/team/team-2@1x_lg.jpg 1x, images/team/team-2@2x_lg.jpg 2x"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team/team-2@1x_md.jpg 1x, images/team/team-2@2x_md.jpg 2x"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/team/team-2@1x_sm.jpg 1x, images/team/team-2@2x_sm.jpg 2x"
+                />
+                <img
+                  src="./images/team/team-2@1x_sm.jpg"
+                  alt="Michele Doe"
+                  width="450"
+                  height="346"
+                  loading="lazy"
+                />
+              </picture>
               <div class="team-wrap">
                 <h3 class="team-name">Michele Doe</h3>
                 <p class="team-position">Extreme Barber</p>
                 <ul class="socials list">
-                  <li>
+                  <li class="socials-item">
                     <a
-                      class="link"
+                      class="socials-link link"
                       href="https://instagram.com"
                       target="_blank"
                       rel="nofollow noopener noreferrer"
                       aria-label="Instagram"
                     >
-                      <img
-                        src="./images/team/instagram.png"
-                        alt="Instagram icon"
-                        width="44"
-                        height="44"
-                      />
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/sprite.svg#instagram"></use>
+                      </svg>
                     </a>
                   </li>
-                  <li>
+                  <li class="socials-item">
                     <a
-                      class="link"
+                      class="socials-link link"
                       href="https://twitter.com"
                       aria-label="Twitter"
                       target="_blank"
                       rel="nofollow noopener noreferrer"
                     >
-                      <img
-                        src="./images/team/twitter.png"
-                        alt="Twitter icon"
-                        width="44"
-                        height="44"
-                      />
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/sprite.svg#twitter"></use>
+                      </svg>
                     </a>
                   </li>
-                  <li>
+                  <li class="socials-item">
                     <a
-                      class="link"
+                      class="socials-link link"
                       href="https://facebook.com"
                       aria-label="Facebook"
                       target="_blank"
                       rel="nofollow noopener noreferrer"
-                      ><img
-                        src="./images/team/facebook.png"
-                        alt="Facebook icon"
-                        width="44"
-                        height="44"
-                    /></a>
+                    >
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/sprite.svg#facebook"></use>
+                      </svg>
+                    </a>
                   </li>
-                  <li>
+                  <li class="socials-item">
                     <a
-                      class="link"
+                      class="socials-link link"
                       href="https://linkedin.com"
                       aria-label="LinkedIn"
                       target="_blank"
                       rel="nofollow noopener noreferrer"
-                      ><img
-                        src="./images/team/linkedin.png"
-                        alt="LinkedIn icon"
-                        width="44"
-                        height="44"
-                    /></a>
+                    >
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/sprite.svg#linkedin"></use>
+                      </svg>
+                    </a>
                   </li>
                 </ul>
               </div>
             </li>
             <li class="team-item card-set__item">
-              <img src="./images/team/team-3.jpg" alt="Alan Black" width="370" height="346" />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/team/team-3@1x_lg.jpg 1x, images/team/team-3@2x_lg.jpg 2x"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team/team-3@1x_md.jpg 1x, images/team/team-3@2x_md.jpg 2x"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/team/team-3@1x_sm.jpg 1x, images/team/team-3@2x_sm.jpg 2x"
+                />
+                <img
+                  src="./images/team/team-3@1x_sm.jpg"
+                  alt="Alan Black"
+                  width="450"
+                  height="346"
+                  loading="lazy"
+                />
+              </picture>
               <div class="team-wrap">
                 <h3 class="team-name">Alan Black</h3>
                 <p class="team-position">Extreme Barber</p>
                 <ul class="socials list">
-                  <li>
+                  <li class="socials-item">
                     <a
-                      class="link"
+                      class="socials-link link"
                       href="https://instagram.com"
                       target="_blank"
                       rel="nofollow noopener noreferrer"
                       aria-label="Instagram"
                     >
-                      <img
-                        src="./images/team/instagram.png"
-                        alt="Instagram icon"
-                        width="44"
-                        height="44"
-                      />
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/sprite.svg#instagram"></use>
+                      </svg>
                     </a>
                   </li>
-                  <li>
+                  <li class="socials-item">
                     <a
-                      class="link"
+                      class="socials-link link"
                       href="https://twitter.com"
                       aria-label="Twitter"
                       target="_blank"
                       rel="nofollow noopener noreferrer"
                     >
-                      <img
-                        src="./images/team/twitter.png"
-                        alt="Twitter icon"
-                        width="44"
-                        height="44"
-                      />
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/sprite.svg#twitter"></use>
+                      </svg>
                     </a>
                   </li>
-                  <li>
+                  <li class="socials-item">
                     <a
-                      class="link"
+                      class="socials-link link"
                       href="https://facebook.com"
                       aria-label="Facebook"
                       target="_blank"
                       rel="nofollow noopener noreferrer"
-                      ><img
-                        src="./images/team/facebook.png"
-                        alt="Facebook icon"
-                        width="44"
-                        height="44"
-                    /></a>
+                    >
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/sprite.svg#facebook"></use>
+                      </svg>
+                    </a>
                   </li>
-                  <li>
+                  <li class="socials-item">
                     <a
-                      class="link"
+                      class="socials-link link"
                       href="https://linkedin.com"
                       aria-label="LinkedIn"
                       target="_blank"
                       rel="nofollow noopener noreferrer"
                     >
-                      <img
-                        src="./images/team/linkedin.png"
-                        alt="LinkedIn icon"
-                        width="44"
-                        height="44"
-                      />
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/sprite.svg#linkedin"></use>
+                      </svg>
                     </a>
                   </li>
                 </ul>
@@ -454,7 +514,7 @@
           <ul class="gallery-list card-set list">
             <li class="gallery-item card-set__item">
               <!-- Використання дескриптора x -->
-              <img
+              <!-- <img
                 class="gallery-img"
                 srcset="
                   ./images/gallery/gallery-img-1@1x_lg.jpg 1x,
@@ -464,9 +524,9 @@
                 alt="gallery"
                 width="270"
                 height="360"
-              />
+              /> -->
               <!-- Використання дескриптора w -->
-              <img
+              <!-- <img
                 class="gallery-img"
                 srcset="
                   ./images/gallery/w/gallery-img_270.jpg 270w,
@@ -482,7 +542,7 @@
                 width="270"
                 height="360"
                 loading="lazy"
-              />
+              /> -->
 
               <picture>
                 <!-- Desktop screen -->
@@ -553,15 +613,6 @@
               </div>
             </li>
             <li class="gallery-item card-set__item">
-              <!-- <img
-                class="gallery-img"
-                src="./images/gallery/gallery-img-2.jpg"
-                alt="gallery"
-                width="270"
-                height="360"
-                loading="lazy"
-              /> -->
-
               <picture>
                 <!-- Desktop screen -->
                 <source
@@ -631,15 +682,6 @@
               </div>
             </li>
             <li class="gallery-item card-set__item">
-              <!-- <img
-                class="gallery-img"
-                src="./images/gallery/gallery-img-3.jpg"
-                alt="gallery"
-                width="270"
-                height="360"
-                loading="lazy"
-              /> -->
-
               <picture>
                 <!-- Desktop screen -->
                 <source
@@ -709,14 +751,6 @@
               </div>
             </li>
             <li class="gallery-item card-set__item">
-              <!-- <img
-                class="gallery-img"
-                src="./images/gallery/gallery-img-4.jpg"
-                alt="gallery"
-                width="270"
-                height="360"
-                loading="lazy"
-              /> -->
               <picture>
                 <!-- Desktop screen -->
                 <source
