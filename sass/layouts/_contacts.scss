@@ -1,15 +1,33 @@
 .contacts {
   flex-basis: 570px;
-  padding-left: 115px;
+  @include section;
 
-  @include mq(mob-only) {
-    @include section;
+  @include mq(desk) {
+    padding-left: 115px;
+  }
+}
+
+.contacts-wrap {
+  @include mq(tab-only) {
+    display: flex;
+    gap: 30px;
   }
 }
 
 .contacts-address {
-  margin-bottom: 70px;
   font-style: normal;
+
+  @include mq(mob-only) {
+    margin-bottom: 44px;
+  }
+
+  @include mq(tab-only) {
+    width: 330px;
+  }
+
+  @include mq(desk) {
+    margin-bottom: 70px;
+  }
 }
 
 .contacts-item:not(:last-child) {
