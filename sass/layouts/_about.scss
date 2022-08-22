@@ -4,18 +4,27 @@
 
 .about__container {
   display: flex;
-  gap: 64px;
+  gap: 30px;
+
+  @include mq(desk) {
+    gap: 64px;
+  }
 }
 
 .about__list {
   @extend %list;
 
   display: flex;
+  align-items: flex-start;
   flex-wrap: wrap;
-  gap: 30px;
 
   @include mq(mob-only) {
     display: none;
+  }
+
+  @include mq(tab) {
+    min-width: 330px;
+    gap: 30px;
   }
 }
 
@@ -32,8 +41,10 @@
 }
 
 .about__right-side {
-  min-width: 330px;
-  max-width: 500px;
+  @include mq(mob) {
+    min-width: 330px;
+    max-width: 500px;
+  }
 }
 
 .about__undertitle {
