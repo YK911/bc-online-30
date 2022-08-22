@@ -8,8 +8,6 @@
 
   transition: background-color var(--anim-fast), backdrop-filter var(--anim-fast);
 
-  background-color: var(--dark-bg-cl-60);
-
   @include mq(mob-only) {
     padding-top: 40px;
     padding-bottom: 40px;

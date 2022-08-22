@@ -453,13 +453,98 @@
           <h2 class="visually-hidden">Our gallery</h2>
           <ul class="gallery-list card-set list">
             <li class="gallery-item card-set__item">
+              <!-- Використання дескриптора x -->
               <img
                 class="gallery-img"
-                src="./images/gallery/gallery-img-1.jpg"
+                srcset="
+                  ./images/gallery/gallery-img-1@1x_lg.jpg 1x,
+                  ./images/gallery/gallery-img-1@2x_lg.jpg 2x
+                "
+                src="./images/gallery/gallery-img-1@1x_lg.jpg"
                 alt="gallery"
                 width="270"
                 height="360"
               />
+              <!-- Використання дескриптора w -->
+              <img
+                class="gallery-img"
+                srcset="
+                  ./images/gallery/w/gallery-img_270.jpg 270w,
+                  ./images/gallery/w/gallery-img_330.jpg 330w,
+                  ./images/gallery/w/gallery-img_418.jpg 418w,
+                  ./images/gallery/w/gallery-img_540.jpg 540w,
+                  ./images/gallery/w/gallery-img_660.jpg 660w,
+                  ./images/gallery/w/gallery-img_836.jpg 836w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 330px, 100vw"
+                src="./images/gallery/w/gallery-img_418.jpg"
+                alt="gallery"
+                width="270"
+                height="360"
+                loading="lazy"
+              />
+
+              <picture>
+                <!-- Desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/gallery/gallery-img-1@1x_lg.webp 1x,
+                    ./images/gallery/gallery-img-1@2x_lg.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/gallery/gallery-img-1@1x_lg.jpg 1x,
+                    ./images/gallery/gallery-img-1@2x_lg.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+
+                <!-- Tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/gallery/gallery-img-1@1x_md.webp 1x,
+                    ./images/gallery/gallery-img-1@2x_md.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/gallery/gallery-img-1@1x_md.jpg 1x,
+                    ./images/gallery/gallery-img-1@2x_md.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Mobile screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/gallery/gallery-img-1@1x_sm.webp 1x,
+                    ./images/gallery/gallery-img-1@2x_sm.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/gallery/gallery-img-1@1x_sm.jpg 1x,
+                    ./images/gallery/gallery-img-1@2x_sm.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  src="./images/gallery/gallery-img-1@1x_sm.jpg"
+                  alt="gallery"
+                  width="418"
+                  height="360"
+                  loading="lazy"
+                />
+              </picture>
               <div class="gallery-wrap">
                 <p class="gallery-desc">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ea molestias
@@ -468,13 +553,76 @@
               </div>
             </li>
             <li class="gallery-item card-set__item">
-              <img
+              <!-- <img
                 class="gallery-img"
                 src="./images/gallery/gallery-img-2.jpg"
                 alt="gallery"
                 width="270"
                 height="360"
-              />
+                loading="lazy"
+              /> -->
+
+              <picture>
+                <!-- Desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/gallery/gallery-img-2@1x_lg.webp 1x,
+                    ./images/gallery/gallery-img-2@2x_lg.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/gallery/gallery-img-2@1x_lg.jpg 1x,
+                    ./images/gallery/gallery-img-2@2x_lg.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+
+                <!-- Tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/gallery/gallery-img-2@1x_md.webp 1x,
+                    ./images/gallery/gallery-img-2@2x_md.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/gallery/gallery-img-2@1x_md.jpg 1x,
+                    ./images/gallery/gallery-img-2@2x_md.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Mobile screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/gallery/gallery-img-2@1x_sm.webp 1x,
+                    ./images/gallery/gallery-img-2@2x_sm.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/gallery/gallery-img-2@1x_sm.jpg 1x,
+                    ./images/gallery/gallery-img-2@2x_sm.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  src="./images/gallery/gallery-img-2@1x_sm.jpg"
+                  alt="gallery"
+                  width="418"
+                  height="360"
+                  loading="lazy"
+                />
+              </picture>
               <div class="gallery-wrap">
                 <p class="gallery-desc">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ea molestias
@@ -483,13 +631,76 @@
               </div>
             </li>
             <li class="gallery-item card-set__item">
-              <img
+              <!-- <img
                 class="gallery-img"
                 src="./images/gallery/gallery-img-3.jpg"
                 alt="gallery"
                 width="270"
                 height="360"
-              />
+                loading="lazy"
+              /> -->
+
+              <picture>
+                <!-- Desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/gallery/gallery-img-3@1x_lg.webp 1x,
+                    ./images/gallery/gallery-img-3@2x_lg.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/gallery/gallery-img-3@1x_lg.jpg 1x,
+                    ./images/gallery/gallery-img-3@2x_lg.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+
+                <!-- Tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/gallery/gallery-img-3@1x_md.webp 1x,
+                    ./images/gallery/gallery-img-3@2x_md.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/gallery/gallery-img-3@1x_md.jpg 1x,
+                    ./images/gallery/gallery-img-3@2x_md.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Mobile screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/gallery/gallery-img-3@1x_sm.webp 1x,
+                    ./images/gallery/gallery-img-3@2x_sm.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/gallery/gallery-img-3@1x_sm.jpg 1x,
+                    ./images/gallery/gallery-img-3@2x_sm.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  src="./images/gallery/gallery-img-3@1x_sm.jpg"
+                  alt="gallery"
+                  width="418"
+                  height="360"
+                  loading="lazy"
+                />
+              </picture>
               <div class="gallery-wrap">
                 <p class="gallery-desc">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ea molestias
@@ -498,13 +709,75 @@
               </div>
             </li>
             <li class="gallery-item card-set__item">
-              <img
+              <!-- <img
                 class="gallery-img"
                 src="./images/gallery/gallery-img-4.jpg"
                 alt="gallery"
                 width="270"
                 height="360"
-              />
+                loading="lazy"
+              /> -->
+              <picture>
+                <!-- Desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/gallery/gallery-img-4@1x_lg.webp 1x,
+                    ./images/gallery/gallery-img-4@2x_lg.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/gallery/gallery-img-4@1x_lg.jpg 1x,
+                    ./images/gallery/gallery-img-4@2x_lg.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+
+                <!-- Tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/gallery/gallery-img-4@1x_md.webp 1x,
+                    ./images/gallery/gallery-img-4@2x_md.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/gallery/gallery-img-4@1x_md.jpg 1x,
+                    ./images/gallery/gallery-img-4@2x_md.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Mobile screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/gallery/gallery-img-4@1x_sm.webp 1x,
+                    ./images/gallery/gallery-img-4@2x_sm.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/gallery/gallery-img-4@1x_sm.jpg 1x,
+                    ./images/gallery/gallery-img-4@2x_sm.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  src="./images/gallery/gallery-img-4@1x_sm.jpg"
+                  alt="gallery"
+                  width="418"
+                  height="360"
+                  loading="lazy"
+                />
+              </picture>
               <div class="gallery-wrap">
                 <p class="gallery-desc">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ea molestias
